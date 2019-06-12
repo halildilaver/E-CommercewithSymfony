@@ -1,0 +1,38 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Yorumlarim{% endblock %}
+{% block body %}
+    {{  include ('home/usersidebar.html.twig') }}
+    <div style="width:75%;">
+        <h1>Yorumlarim</h1>
+        {{  include ('admin/messages.html.twig') }}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Comment ID</th>
+                <th>Product Name</th>
+                <th>Comment</th>
+                <th>Status</th>
+                <th>Product</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for rs in comments %}
+                <tr>
+                    <td>{{ rs.id }}</td>
+                    <td>{{ rs.productname }}</td>
+                    <td>{{ rs.comment }}</td>
+                    <td>{{ rs.status }}</td>
+                    <td><a href="{{ path('product_detail', {'id':  rs.productid}) }}"><button style="background-color: orange" class="btn my-2 my-sm-0">ÜRÜNE GİT</button></a></td>
+                    <td>{{ include('/userpanel/_delete_form.html.twig') }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="11">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

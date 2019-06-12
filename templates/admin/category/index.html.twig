@@ -1,0 +1,50 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Kategoriler{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a><i class="fa fa-angle-right"></i>Kategoriler</li>
+    </ol>
+    <div class="agile-grids">
+        <!--four-grids here-->
+        <div class="w3l-table-info">
+            <div class="bg-effect" align="right">
+                <ul class="bt-list">
+                    <li><a href="{{ path('admin_category_new') }}" class="hvr-icon-float-away col-24 bg-success">Yeni Kategori</a></li>
+                </ul>
+            </div>
+            <h2>Kategoriler</h2>
+            <table id="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title (Başlık)</th>
+                    <th>Keywords (Anahtar Kelimeler)</th>
+                    <th>Description (Açıklama)</th>
+                    <th>Durum</th>
+                    <th>Göster</th>
+                    <th>Düzenle</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for category in categories %}
+                    <tr>
+                        <td data-th="ID"><span class="bt-content">{{ category.id }}</span></td>
+                        <td data-th="Title"><span class="bt-content">{{ category.title }}</span></td>
+                        <td data-th="Keywords"><span class="bt-content">{{ category.keywords }}</span></td>
+                        <td data-th="Description"><span class="bt-content">{{ category.description }}</span></td>
+                        <td data-th="Durum"><span class="bt-content">{{ category.status }}</span></td>
+                        <td data-th="Göster"><a href="{{ path('admin_category_show', {'id': category.id}) }}" class="btn btn-xs btn-primary bg-alert dark text-white fw600 text-center">Göster</a></td>
+                        <td data-th="Düzenle"><a href="{{ path('admin_category_edit', {'id': category.id, 'pid': category.parentid}) }}" class="btn btn-xs btn-primary bg-danger dark text-white fw600 text-center">Düzenle</a></td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="7">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Comments index{% endblock %}
+
+{% block body %}
+    <h1>Comments index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Product Name</th>
+                <th>Comment</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comment in comments %}
+            <tr>
+                <td>{{ comment.id }}</td>
+                <td>{{ comment.name }}</td>
+                <td>{{ comment.productname }}</td>
+                <td>{{ comment.comment }}</td>
+                <td>{{ comment.status }}</td>
+                <td><a href="javascript:openWin('{{ path('comments_show', {'id': comment.id}) }}','','toolbar=no,location=no,directories=0,status=no,top=100,left=200,menuBar=no,scrollBars=no,resizable=no,width=600,height=800');" class="btn btn-xs btn-primary bg-success dark text-white fw600 text-center">Göster</a></td>
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

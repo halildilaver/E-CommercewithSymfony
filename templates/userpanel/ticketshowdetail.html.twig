@@ -1,0 +1,38 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Mesaj Detayı{% endblock %}
+
+{% block body %}
+{{  include ('home/usersidebar.html.twig') }}
+<div style="width:75%;">
+    <div class="table-title">
+        <h1>Mesaj Detayı</h1>
+    </div>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ messages.id }}</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>{{ messages.subject }}</td>
+            </tr>
+            <tr>
+                <th>Your Message</th>
+                <td>{{ messages.message }}</td>
+            </tr>
+            <tr>
+                <th>Admin Comment</th>
+                <td>{{ messages.comment }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ messages.status }}</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,300 @@
+<div class="grid-form1">
+<div class="panel-body">
+<form class="form-horizontal" method="post">
+    <section class="design-process-section" id="process-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- design process steps-->
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+                        <li role="presentation" class="active"><a href="#discover" aria-controls="discover" role="tab" data-toggle="tab"><i class="fa fa-search" aria-hidden="true"></i>
+                                <p>Genel Bilgiler</p>
+                            </a></li>
+                        <li role="presentation"><a href="#strategy" aria-controls="strategy" role="tab" data-toggle="tab"><i class="fa fa-send-o" aria-hidden="true"></i>
+                                <p>Email Server</p>
+                            </a></li>
+                        <li role="presentation"><a href="#optimization" aria-controls="optimization" role="tab" data-toggle="tab"><i class="fa fa-qrcode" aria-hidden="true"></i>
+                                <p>Hakkımızda</p>
+                            </a></li>
+                        <li role="presentation"><a href="#content" aria-controls="content" role="tab" data-toggle="tab"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                <p>İletişim</p>
+                            </a></li>
+                        <li role="presentation"><a href="#reporting" aria-controls="reporting" role="tab" data-toggle="tab"><i class="fa fa-clipboard" aria-hidden="true"></i>
+                                <p>Referanslar</p>
+                            </a></li>
+                    </ul>
+                    <!-- end design process steps-->
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="discover">
+                            <div >
+                                <h3 class="semi-bold">Genel Bilgiler</h3>
+
+                                <div class="grid-form1">
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Adı</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									</span>
+                                                    <input id="title" name="setting[title]" class="form-control1" type="text" value="{{ setting.title }}" placeholder="Title (Başlık)">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Keywords (Anahtar Kelimeler)</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									</span>
+                                                    <input id="keywords" name="setting[keywords]" class="form-control1" type="text" value="{{ setting.keywords }}" placeholder="Keywords (Anahtar Kelimeler)">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Description (Açıklama)</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                                                    <input type="text" name="setting[description]" class="form-control1" value="{{ setting.description }}" placeholder="Description (Açıklama)">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Firma adı</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                                                    <input type="text" name="setting[company]" class="form-control1" value="{{ setting.company }}" placeholder="Alış Fiyatı">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Adresi</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                                                    <input type="text" name="setting[address]" class="form-control1" value="{{ setting.address }}" placeholder="Satış Fiyatı">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Fax</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                                                    <input type="text" name="setting[fax]" class="form-control1" value="{{ setting.fax }}" placeholder="Fax">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Telefon</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                                                    <input type="text" name="setting[phone]" class="form-control1" value="{{ setting.phone }}" placeholder="Tel">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">E-Mail</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                                                    <input type="text" name="setting[email]" class="form-control1" value="{{ setting.email }}" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="selector1" class="col-sm-2 control-label">Status (Durum)</label>
+                                            <div class="col-sm-8"><select name="setting[status]" id="selector1" class="form-control1">
+                                                    <option>{{ setting.status }}</option>
+                                                    <option>TRUE</option>
+                                                    <option>FALSE</option>
+                                                </select></div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="strategy">
+                            <h3 class="semi-bold">Email Server</h3>
+                            <div class="grid-form1">
+                                <div class="panel-body">
+
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Email Server</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									    <span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									    </span>
+                                                    <input id="keywords" name="setting[smtpserver]" class="form-control1" type="text" value="{{ setting.smtpserver }}" placeholder="Keywords (Anahtar Kelimeler)">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									    <span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									    </span>
+                                                    <input id="keywords" name="setting[smtpemail]" class="form-control1" type="text" value="{{ setting.smtpemail }}" placeholder="Keywords (Anahtar Kelimeler)">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Email Şifre</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									    <span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									    </span>
+                                                    <input id="keywords" name="setting[smtppassword]" class="form-control1" type="text" value="{{ setting.smtppassword }}" placeholder="Keywords (Anahtar Kelimeler)">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">SMTP Port</label>
+                                            <div class="col-md-8">
+                                                <div class="input-group input-icon right">
+									    <span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									    </span>
+                                                    <input id="keywords" name="setting[smtpport]" class="form-control1" type="text" value="{{ setting.smtpport }}" placeholder="Keywords (Anahtar Kelimeler)">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="help-block">a-z veya A-Z</p>
+                                            </div>
+                                        </div>
+
+
+                                    </div></div></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="optimization">
+                            <h3 class="semi-bold">Hakkımızda</h3>
+
+                            <textarea id="summernote" name="setting[aboutus]" rows="10" >{{ setting.aboutus }}</textarea>
+                            <script>
+                                $('#summernote').summernote({
+                                    placeholder: 'Birşeyler yaz...',
+                                    tabsize: 2,
+                                    height: 100
+                                });
+                            </script>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="content">
+                            <h3 class="semi-bold">İletişim</h3>
+
+                            <textarea id="summernote2" name="setting[contact]" rows="10" >{{ setting.contact }}</textarea>
+                            <script>
+                                $('#summernote2').summernote({
+                                    placeholder: 'Birşeyler yaz...',
+                                    tabsize: 2,
+                                    height: 100
+                                });
+                            </script>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="reporting">
+                            <h3 class="semi-bold">Referanslar</h3>
+                            <textarea id="summernote3" name="setting[referances]" rows="10" >{{ setting.referances }}</textarea>
+                            <script>
+                                $('#summernote3').summernote({
+                                    placeholder: 'Birşeyler yaz...',
+                                    tabsize: 2,
+                                    height: 100
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div align="center" class="col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn-primary btn">Tamamla</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+

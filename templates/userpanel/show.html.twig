@@ -1,0 +1,52 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+{{  include ('home/usersidebar.html.twig') }}
+<div style="width:75%;">
+    <div class="table-title">
+        <h1>Kullanıcı Bilgileri</h1>
+    </div>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ app.user.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ app.user.name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ app.user.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{% for item in app.user.roles %}
+                        <option>{{ item }}</option>
+                    {% endfor %}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ app.user.status }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ app.user.address }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ app.user.city }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ app.user.phone }}</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+{% endblock %}

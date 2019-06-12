@@ -1,0 +1,54 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Setting index{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a><i class="fa fa-angle-right"></i>Ayarlar</li>
+    </ol>
+    <div class="agile-grids">
+        <!--four-grids here-->
+        <div class="w3l-table-info">
+            <h2>Site Ayarları</h2>
+            <table id="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Keywords</th>
+                    <th>Company</th>
+                    <th>Address</th>
+                    <th>Fax</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Göster</th>
+                    <th>Düzenle</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for setting in settings %}
+                    <tr>
+                        <td>{{ setting.id }}</td>
+                        <td>{{ setting.title }}</td>
+                        <td>{{ setting.description }}</td>
+                        <td>{{ setting.keywords }}</td>
+                        <td>{{ setting.company }}</td>
+                        <td>{{ setting.address }}</td>
+                        <td>{{ setting.fax }}</td>
+                        <td>{{ setting.phone }}</td>
+                        <td>{{ setting.email }}</td>
+                        <td>{{ setting.status }}</td>
+                        <td data-th="Göster"><a href="{{ path('admin_setting_show', {'id': setting.id}) }}" class="btn btn-xs btn-primary bg-alert dark text-white fw600 text-center">Göster</a></td>
+                        <td data-th="Düzenle"><a href="{{ path('admin_setting_edit', {'id': setting.id}) }}" class="btn btn-xs btn-primary bg-danger dark text-white fw600 text-center">Düzenle</a></td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="18">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div></div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% for label, flashes in app.session.flashbag.all %}
+    {% for flash in flashes %}
+        {% if (label == 'success') %}
+            <div class="alert alert-success" role="alert">
+                <strong>Well done!</strong>
+                {{ flash }}
+            </div>
+        {% elseif (label == 'error') %}
+            <div class="alert alert-warning" role="alert">
+                <strong>Warning!</strong>
+                {{ flash }}
+            </div>
+        {% elseif (label == 'info') %}
+            <div class="alert alert-info" role="alert">
+                <strong>Heads up!</strong>
+                {{ flash }}
+            </div>
+        {% elseif (label == 'warning') %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Oh snap!</strong>
+                {{ flash }}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endfor %}

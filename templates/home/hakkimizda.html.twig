@@ -1,0 +1,16 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}{{ data[0].title }} | Hakkımızda{% endblock %}
+{% block keywords %}{{ data[0].keywords }}{% endblock %}
+{% block description %}{{ data[0].description }}{% endblock %}
+
+{% block body %}
+    <div >
+        <h5 >Hakkımızda</h5>
+    </div>
+        <div>
+            <p>{{ data[0].aboutus|raw }}</p>
+        </div>
+{% endblock %}
+
+

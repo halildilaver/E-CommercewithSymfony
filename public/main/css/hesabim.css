@@ -1,0 +1,1222 @@
+
+.kes { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.d1 { display: table; }
+
+.d2 { display: table-cell; vertical-align: middle; }
+
+.tiklanabilir { cursor: pointer; }
+
+/* ================================================ */
+/* ! HESABIM ANASAYFA                               */
+/* ================================================ */
+.hesabimBolumuTutucu { float: left; width: 100%; margin: 30px 0; }
+
+.hesabimBolumuTutucu * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.hesabimAnasayfa { float: left; width: 100%; }
+
+.hesabimAnasayfa .hesabimAnasayfaBaslik { float: left; width: 100%; margin-bottom: 10px; }
+
+.hesabimAnasayfa .hesabimAnasayfaBaslik h2 { display: block; margin: 0; padding: 0; font-size: 25px; color: #2b2a2a; font-weight: 500; line-height: 30px; margin-bottom: 10px; }
+
+.hesabimAnasayfa .hesabimAnasayfaBaslik h2 span { display: block; font-size: 18px; font-weight: normal; }
+
+.hesabimAnasayfa .hesabimAnasayfaBaslik p { color: #393737; font-size: 16px; font-weight: normal; line-height: 25px; }
+
+.hesabimAnasayfaMenuler { float: left; width: 100%; }
+
+.hesabimAnasayfaMenuler ul { margin: 0 -15px; padding: 0; }
+
+.hesabimAnasayfaMenuler ul li { float: left; width: 25%; padding: 0 15px; list-style: none; margin-bottom: 15px; }
+
+.hesabimAnasayfaMenuler ul li a { display: block; text-decoration: none; background: #fff; color: #333333; font-size: 14px; text-align: center; padding: 115px 5px 55px 5px; position: relative; transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; }
+
+.hesabimAnasayfaMenuler ul li a .fa { font-size: 42px; position: absolute; top: 51px; left: 0; width: 100%; text-align: center; }
+
+.hesabimAnasayfaMenuler ul li a:hover { background: dodgerblue; color: #ffffff; transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; }
+
+.hesabimAnasayfaMenuler ul li a span { display: block; height: 40px; line-height: 20px; }
+/* ================================================ */
+/* ! SOL ANAMENU                                    */
+/* ================================================ */
+.solAnaMenu { float: left; width: 23%; background: dodgerblue; padding: 0 20px; height: 400px; }
+
+.solAnaMenu ul { margin: 0; padding: 0; }
+
+.solAnaMenu ul li { margin: 0; padding: 0; list-style: none; }
+
+.solAnaMenu ul li a { display: block; text-decoration: none; line-height: 49px; color: #fff6f6; font-size: 14px; border-bottom: 1px solid #dddddd; }
+
+.solAnaMenu ul li a:hover, .solAnaMenu ul li a.aktif { border-color: orangered; outline: 0; }
+
+.solAnaMenu ul li a:focus { outline: 0; }
+
+.solAnaMenu ul li a .fa { margin-right: 5px; }
+
+/* ================================================ */
+/* ! SAG ICERIK BOLUMU                              */
+/* ================================================ */
+.hsbmTextbox { float: left; width: 100%; height: 40px; padding: 0 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.hsbmTextbox:focus { border-color: #393737; outline: 0; }
+
+.hsbmPassword { float: left; width: 100%; height: 40px; padding: 0 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.hsbmPassword:focus { border-color: #393737; outline: 0; }
+
+.hsbmSelect { float: left; width: 100%; height: 40px; padding: 0 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.hsbmSelect:focus { border-color: #393737; outline: 0; }
+
+.hsbmTextarea { float: left; width: 100%; resize: none; height: 68px; padding: 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.hsbmTextarea::-webkit-input-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.hsbmTextarea::-moz-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.hsbmTextarea:-moz-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.hsbmTextarea:-ms-input-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.hsbmTextarea:focus { border-color: #393737; outline: 0; }
+
+.sagIcerikTutucu { float: left; width: 77%; padding-left: 30px; }
+
+.sagIcerikTutucu .sagIcerikBolumu { float: left; width: 100%; background: #f2f2f2; padding: 15px 18px; }
+
+.sagIcerikTutucu .sagIcerikBolumu .anaBaslik { font-weight: normal; margin: 0; padding: 0; padding-bottom: 15px; display: block; color: #393737; font-size: 14px; border-bottom: 1px solid #dddddd; margin-bottom: 23px; }
+
+.sagIcerikTutucu .sagIcerikBolumu .icerikTutucu { float: left; width: 100%; }
+
+.sagIcerikTutucu .satirBlok { float: left; width: 100%; margin-bottom: 20px; }
+
+.sagIcerikTutucu .satirBlok .satirBlokSag { float: left; width: 73%; }
+
+.sagIcerikTutucu .satirBlok .hsbmSpan { float: left; width: 100%; margin: 0; margin-bottom: 7px; display: inline-block; padding: 0; color: #393737; font-size: 13px; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextbox { float: left; background: #ffffff; width: 100%; height: 40px; padding: 0 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextbox:focus { border-color: #393737; outline: 0; }
+
+.sagIcerikTutucu .satirBlok .hsbmPassword { float: left; background: #ffffff; width: 100%; height: 40px; padding: 0 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.sagIcerikTutucu .satirBlok .hsbmPassword:focus { border-color: #393737 !important; outline: 0; }
+
+.sagIcerikTutucu .satirBlok .hsbmSelect { float: left; background: #ffffff; width: 100%; height: 40px; padding: 0 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.sagIcerikTutucu .satirBlok .hsbmSelect:focus { border-color: #393737 !important; outline: 0; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextarea { float: left; background: #ffffff; width: 100%; resize: none; height: 68px; padding: 10px; margin: 0; color: #393737; font-size: 13px; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextarea::-webkit-input-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextarea::-moz-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextarea:-moz-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextarea:-ms-input-placeholder { color: #cccccc; opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; }
+
+.sagIcerikTutucu .satirBlok .hsbmTextarea:focus { border-color: #393737; outline: 0; }
+
+.sagIcerikTutucu .selectGrup { float: left; width: 100%; }
+
+.sagIcerikTutucu .selectGrup .selectRow { margin: 0 -5px; }
+
+.sagIcerikTutucu .selectGrup .ikiliSelect { float: left; width: 50%; padding: 0 5px; }
+
+.sagIcerikTutucu .selectGrup .ucluSelect { float: left; width: 33.33333%; padding: 0 5px; }
+
+.sagIcerikTutucu .hsbmLabel { cursor: pointer; line-height: 40px; display: inline-block; margin: 0; padding: 0; color: #393737; font-size: 13px; }
+
+.sagIcerikTutucu .hsbmLabel .hsbmCheckbox { float: left; margin: 14px 8px 0 0; }
+
+.sagIcerikTutucu .hsbmLabel .hsbmRadio { float: left; margin: 14px 8px 0 0; }
+
+.sagIcerikTutucu .cinsiyetSatir .hsbmLabel { margin-right: 20px; }
+
+.sagIcerikTutucu .faturaTipi .hsbmLabel { margin-right: 20px; }
+
+.sagIcerikTutucu.sayfaYukleniyor { position: relative; }
+
+.sagIcerikTutucu.sayfaYukleniyor:after { content: ''; background: rgba(255, 255, 255, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 99; }
+
+.sagIcerikTutucu.sayfaYukleniyor:before { content: '\f110'; font-family: 'FontAwesome'; position: absolute; font-size: 100px; left: 50%; top: 50%; z-index: 999; margin-left: -50px; margin-top: -50px; color: #000; -webkit-animation: fa-spin 2s infinite linear; animation: fa-spin 2s infinite linear; }
+
+.sayfaYukleniyor { position: relative; }
+
+.sayfaYukleniyor:after { content: ''; background: rgba(255, 255, 255, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 99; }
+
+.sayfaYukleniyor:before { content: '\f110'; font-family: 'FontAwesome'; position: absolute; font-size: 100px; left: 50%; top: 50%; z-index: 999; margin-left: -50px; margin-top: -50px; color: #000; -webkit-animation: fa-spin 2s infinite linear; animation: fa-spin 2s infinite linear; }
+
+
+.blokRow { margin: 0 -17.5px; }
+
+.satirBlokRow { margin: 0 -17.5px; }
+
+.icerikIkiliBlok { float: left; width: 50%; padding: 0 17.5px; }
+
+/* ================================================ */
+/* ! UYELIK BILGILERI                               */
+/* ================================================ */
+.uyelikBilgilerim { float: left; width: 100%; }
+
+.uyelikBilgilerim .bilgiGuncelle { float: right; height: 40px; padding: 0 27px; margin: 0; border: none; cursor: pointer; background: #6aac3b; font-size: 14px; color: #ffffff; }
+
+/* ================================================ */
+/* ! ADRES DEFTERIM                                 */
+/* ================================================ */
+.adreslerim { float: left; width: 100%; }
+
+.adresBlok { float: left; width: 50%; padding: 0 17.5px; margin-bottom: 35px; }
+
+.adresBlok .adresBlokIcerik { float: left; width: 100%; background: #ffffff; min-height: 275px; padding: 20px; }
+
+.adresBlok .adresBlokIcerik h5 { margin: 0 0 15px 0; padding: 0 0 15px 0; border-bottom: 1px solid #f2f2f2; color: #393737; font-size: 14px; }
+
+.adresBlok .adresBlokIcerik p { color: #393737; font-size: 14px; line-height: 24px; display: block; margin: 0; }
+
+.adresBlok .adresBlokIcerik .adresButonlar { float: left; width: 100%; padding-top: 15px; border-top: 1px solid #f2f2f2; margin-top: 15px; text-align: right; }
+
+.adresBlok .adresBlokIcerik .adresButonlar a { display: inline-block; margin-left: 15px; color: #000000; font-size: 13px; text-decoration: none; }
+
+.adresBlok:nth-child(3n) { clear: left; }
+
+.adresBlok .adresEkle { display: block; color: #000000; font-size: 13px; text-align: center; text-decoration: none; padding: 113px 0 56px 0; background: url("/Scripts/hesabim/adresEkle.png") center top 35px no-repeat; }
+
+.adresGir { float: left; width: 100%; background-color: #fff; padding: 15px 0; }
+
+.adresGir .icerikIkiliBlok { width: 100%; }
+
+#buKoliDiv { float: left; width: 100%; height: 550px; background-color: #fff; padding: 15px 0; position: relative; }
+
+/* ================================================ */
+/* ! SIPARISLERIM                                   */
+/* ================================================ */
+.siparislerim { float: left; width: 100%; }
+
+.tabLink { float: left; width: 100%; }
+
+.tabLink a { display: inline-block; float: left; color: #393737; font-size: 14px; line-height: 40px; padding: 0 15px; text-decoration: none; }
+
+.tabLink a.aktif { background: #ffffff; }
+
+.tabIcerik { float: left; width: 100%; padding: 20px; background: #ffffff; }
+
+.siparisUrun { float: left; width: 100%; margin-bottom: 20px; background: #f2f2f2; }
+
+.siparisUrun .urunResmin { float: left; width: 15%; background: #f2f2f2; padding: 15px 0 15px 5px; }
+
+.siparisUrun .urunResmin a { display: block; height: 132px; overflow: hidden; }
+
+.siparisUrun .urunResmin a img { width: 100%; display: block; }
+
+.siparisUrun .siparisDetayBilgileri { float: left; width: 85%; padding: 15px 0 15px 5px; }
+
+.siparisUrun .siparisDetayBilgileri .solDetay { float: left; width: 50%; }
+
+.siparisUrun .siparisDetayBilgileri .sagDetay { float: left; width: 50%; }
+
+.siparisUrun .siparisDetayBilgileri a { display: inline-block; color: #393737; font-size: 13px; font-weight: 600; line-height: 15px; text-decoration: none; }
+
+.siparisUrun .siparisDetayBilgileri a strong { display: block; font-weight: normal; padding: 10px 0; }
+
+.siparisUrun .siparisDetayBilgileri .hsbmSpan { display: block; color: #393737; font-size: 13px; line-height: 1.2; margin-bottom: 8px; }
+
+.siparisUrun .siparisDetayBilgileri .hsbmSpan strong { display: inline-block; width: 120px; margin-right: 15px; font-weight: 600; }
+
+.siparisUrun .siparisDetayBilgileri .hsbmSpan strong:after { content: ':'; float: right; color: #393737; font-size: 13px; }
+
+.sepetBolmeBaslik .cart-checkbox { width: 80px !important; }
+
+.siparisUrun .cart-checkbox.urunSelect { float: left; width: 80px; padding-left: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; vertical-align: middle; padding: 8px 5px 0 20px; display: inline-block; }
+
+.siparisUrun .siparisDetayBilgileri.w65 { width: 65%; }
+
+.sepetUrunTasi { width: 70%; margin-bottom: 15px; float: left; }
+
+.sepetUrunTasi .hsbmSelect { width: 50%; }
+
+.siparisAdresDetaylari { float: left; width: 100%; }
+
+.siparisAdresDetaylari .blokRow { margin: 0 -10px; }
+
+.siparisAdresDetaylari .blok { float: left; width: 33.33333%; padding: 0 10px; margin-bottom: 20px; }
+
+.siparisAdresDetaylari .blok .blokIcerik { float: left; width: 100%; background: #f2f2f2; padding: 20px; min-height: 203px; }
+
+.siparisAdresDetaylari .blok .blokIcerik h6 { display: block; margin: 0 0 10px 0; color: #393737; font-size: 13px; font-weight: 600; }
+
+.siparisAdresDetaylari .blok .blokIcerik p { margin: 0; font-size: 12px; line-height: 20px; color: #393737; }
+
+.siparisAdresDetaylari .blok .blokIcerik .tutar { display: block; font-size: 12px; line-height: 20px; color: #393737; margin-bottom: 5px; }
+
+.siparisAdresDetaylari .blok .blokIcerik .tutar strong { float: right; display: inline-block; }
+
+.siparisAdresDetaylari .blok .blokIcerik .genelToplam { float: left; width: 100%; border-top: 1px solid #dddddd; padding-top: 10px; margin-top: 10px; }
+
+.siparisAdresDetaylari .blok .blokIcerik .genelToplam .hsbmSpan { display: block; color: #393737; font-size: 13px; font-weight: 600; }
+
+.siparisAdresDetaylari .blok .blokIcerik .genelToplam .hsbmSpan strong { display: inline-block; float: right; color: #fc5f5e; }
+
+.hesabimTablo { width: 100%; }
+
+.hesabimTablo .tdTutucu { float: left; width: 100%; background: #f2f2f2; margin-top: 20px; position: relative; }
+
+.hesabimTablo .tdTutucu span { display: block; color: #393737; font-size: 13px; line-height: 40px; }
+
+.hesabimTablo .tdTutucu.tabloBasliklari { background: #393737; }
+
+.hesabimTablo .tdTutucu.tabloBasliklari span { color: #fff; font-size: 13px; display: block; line-height: 40px; }
+
+.hesabimTablo .tdTutucu.tdTutucuBeyaz { background: #fff; }
+
+.hesabimTablo .tdTutucu .trTutucu { padding: 0 10px; }
+
+.hesabimTablo .tdTutucu .trTutucu input[type="checkbox"] { margin-top: 15px; }
+
+.hesabimTablo .trTutucu6 { width: 16.5%; float: left; }
+
+.hesabimTablo .trTutucu5 { width: 20%; float: left; }
+
+.hesabimTablo .trTutucu4 { width: 25%; float: left; }
+
+.hesabimTablo .tabloIcerikTutucu { float: left; width: 100%; }
+
+.hesabimTablo .ustListe { float: left; width: 100%; }
+
+.hesabimTablo .altListe { float: left; width: 100%; }
+
+.sozlesmeOku { margin-bottom: 11px; float: left; }
+.sozlesmeOku a { font-weight: bold; text-decoration: underline; }
+
+/* ================================================ */
+/* ! BUTONLAR                                       */
+/* ================================================ */
+.ustButonTutucu { float: left; width: 100%; text-align: right; margin-bottom: 20px; }
+
+.ustButonTutucu2 { float: left; width: 100%; text-align: left; margin-bottom: 20px; }
+
+.altButonTutucu { float: left; width: 100%; text-align: right; margin-bottom: 10px; }
+
+.altButonTutucu2 { float: left; width: 100%; text-align: left; }
+
+.marginSifir { margin: 0 !important; }
+
+.paddingSifir { margin: 0 !important; }
+
+.yesilButon { cursor: pointer; background: #6aac3b; border: 1px solid #6aac3b; display: inline-block; text-decoration: none; line-height: 40px; padding: 0 30px; margin-left: 20px; font-size: 14px; color: #ffffff !important; }
+
+.yesilButon:hover { background: transparent; color: #6aac3b !important; }
+
+.yesilButon .fa { margin-right: 7px; }
+
+.kirmiziButon { cursor: pointer; background: #fc5f5e; border: 1px solid #fc5f5e; display: inline-block; text-decoration: none; line-height: 40px; padding: 0 30px; margin-left: 20px; font-size: 14px; color: #ffffff !important; }
+
+.kirmiziButon:hover { background: transparent; color: #fc5f5e !important; }
+
+.kirmiziButon .fa { margin-right: 7px; }
+
+.griButon { cursor: pointer; background: #393737; border: 1px solid #393737; display: inline-block; text-decoration: none; line-height: 40px; padding: 0 30px; margin-left: 20px; font-size: 14px; color: #ffffff !important; }
+
+.griButon:hover { background: transparent; color: #393737 !important; }
+
+.griButon .fa { margin-right: 7px; }
+
+.griUyari { display: block; color: #000; float: left; width: 100%; clear: left; background: #F5F5F5; padding: 10px; line-height: 1.3; font-weight: bold; font-size: 13px; margin: 10px 0; }
+
+.yesilUyari { display: block; color: #3c763d; float: left; width: 100%; clear: left; background: #DFF0D8; padding: 10px; line-height: 1.3; font-weight: bold; font-size: 13px; margin: 10px 0; }
+
+.maviUyari { display: block; color: #31708f; float: left; width: 100%; clear: left; background: #D9EDF7; padding: 10px; line-height: 1.3; font-weight: bold; font-size: 13px; margin: 10px 0; }
+
+.sariUyari { display: block; color: #8a6d3b; float: left; width: 100%; clear: left; background: #FCF8E3; padding: 10px; line-height: 1.3; font-weight: bold; font-size: 13px; margin: 10px 0; }
+
+.kirmiziUyari { display: block; color: #a94442; float: left; width: 100%; clear: left; background: #F2DEDE; padding: 10px; line-height: 1.3; font-weight: bold; font-size: 13px; margin: 10px 0; }
+
+.butonDisabled { opacity: 0.6; cursor: not-allowed !important; }
+
+/* ================================================ */
+/* ! IADE TALEPLERIM                                */
+/* ================================================ */
+.hesabimFormTutucu { float: left; width: 100%; }
+
+.hesabimForm { float: left; width: 100%; background: #ffffff; padding: 20px; margin-bottom: 20px; }
+
+.hesabimForm .satirBlok .hsbmTextbox { background: #f2f2f2 !important; }
+
+.hesabimForm .satirBlok .hsbmPassword { background: #f2f2f2 !important; }
+
+.hesabimForm .satirBlok .hsbmSelect { background: #f2f2f2 !important; }
+
+.hesabimForm .satirBlok .hsbmTextarea { background: #f2f2f2 !important; }
+
+.iadeTalebiOlusturTutucu { float: left; width: 100%; }
+
+.yeniIadeTalebiForm .urunResmin input { float: left; margin: 0 10px; }
+
+.iadeTalebiYazisi { float: left; width: 100%; background: #ffffff; padding: 20px; border-left: 3px solid #62adee; }
+
+.iadeTalebiYazisi span { display: block; font-size: 13px; line-height: 1.3; color: #393737; margin-bottom: 15px; }
+
+.iadeTalebiYazisi .baslik { display: block; color: #62adee; font-weight: 500; font-size: 13px; margin-bottom: 10px; font-weight: bold; }
+
+.iadeTalepCevabi { float: left; width: 100%; background: #ffffff; margin-bottom: 20px; padding: 20px; border-left: 3px solid #6e7a8a; }
+
+.iadeTalepCevabi span { display: block; font-size: 13px; line-height: 1.3; color: #393737; margin-bottom: 15px; }
+
+.iadeTalepCevabi .baslik { display: block; color: #6e7a8a; font-weight: 500; font-size: 13px; margin-bottom: 10px; font-weight: bold; }
+
+.iadeTalebiKapat { display: inline-block; float: right; color: #62adee; font-weight: 500; font-size: 18px; }
+
+.iadeTalebiKapat:hover { color: #000000; }
+
+.iadeTalebiYazisiUrunler { float: left; width: 100%; background: #ffffff; padding: 20px; border-left: 3px solid #62adee; margin-bottom: 20px; }
+/* ================================================ */
+/* ! FAVORILERIM                                    */
+/* ================================================ */
+.favorilerimTutucu .sepetIcon { color: #393737; font-size: 20px; display: inline-block; }
+
+.istekDetayIcerik .istekUrunDetay.favoriUrunDetay { padding: 16px 17px; }
+
+
+
+/* ================================================ */
+/* ! HESABIM SAYFASI TABLO YAPISI                   */
+/* ================================================ */
+.hesabimTablo { width: 100%; margin-bottom: 30px; border: none; }
+
+.hesabimTablo thead { background: #393737; }
+
+.hesabimTablo thead tr td { color: #ffffff; }
+
+.hesabimTablo tbody tr td { background: #f2f2f2; }
+
+.hesabimTablo tbody tr.tabloGri td { border-top: 20px solid #ffffff; }
+
+.hesabimTablo tbody tr.tabloGriDetay td { padding: 20px; background: #ffffff; border: 1px solid #f2f2f2; }
+
+.hesabimTablo tbody tr.tabloBeyaz td { background: #ffffff; border-top: 20px solid #f2f2f2; }
+
+.hesabimTablo tbody tr.satirBosluk td { padding: 15px; max-width: 400px; }
+
+.hesabimTablo tbody tr.tabloBeyaz td img { max-width: 90px; }
+
+.hesabimTablo tbody tr.tabloBeyazDetay td { padding: 20px; border: 1px solid #ffffff; }
+
+.hesabimTablo tr { vertical-align: middle; }
+
+.hesabimTablo tr td { font-size: 13px; padding: 13px 15px; color: #393737; font-size: 12px; }
+
+.hesabimTablo tr td .baslik { display: block; line-height: 1.3; vertical-align: middle; border: none; }
+
+.hesabimTablo tr td .baslik { display: block; line-height: 1.3; vertical-align: middle; border: none; }
+
+.hesabimTablo tr td * { vertical-align: middle; }
+
+.hesabimTablo tr td a { color: #393737; font-size: 12px; text-decoration: none; }
+
+.hesabimTablo tr td .fa { vertical-align: baseline; }
+
+.hesabimTablo tr td strong { vertical-align: baseline; }
+
+.hesabimTablo .yesilYazi { line-height: 40px; display: inline-block; color: #6aac3b; font-size: 13px; }
+
+.hesabimTablo .kirmiziYazi { line-height: 40px; display: inline-block; color: #fc5f5e; font-size: 13px; }
+
+.hesabimTablo .duzenle { line-height: 40px; display: inline-block; color: #393737; font-size: 13px; text-decoration: none; }
+
+.hesabimTablo .epostaGonder { line-height: 40px; display: inline-block; color: #393737; font-size: 13px; text-decoration: none; }
+
+.hesabimTablo .sepetIcon { color: #393737; font-size: 20px; display: inline-block; }
+
+.hesabimTablo .destekDuzenle { display: inline-block; color: #fc5f5e; font-size: 15px; }
+
+.hesabimTablo .iadeCevap { color: #6aac3b; text-decoration: none; }
+
+.hesabimTablo .iadeCevap:after { font-family: FontAwesome; content: "\f27a"; }
+
+.hesabimTablo .iadeCevap.cevapYok { color: #000; }
+
+.hesabimTablo .iadeCevap.cevapYok:after { font-family: FontAwesome; content: "\f0e5"; }
+
+/* ================================================ */
+/* ! ISTEK LISTELERIM                               */
+/* ================================================ */
+.istekListelerim { float: left; width: 100%; }
+
+.istekDetayIcerik { float: left; width: 100%; }
+
+.istekDetayIcerik .istekUrunResmi { float: left; width: 20%; padding-right: 20px; }
+
+.istekDetayIcerik .istekUrunResmi a { display: blok; }
+
+.istekDetayIcerik .istekUrunResmi a img { width: 100%; display: blok; }
+
+.istekDetayIcerik .istekUrunDetay { float: left; width: 80%; padding: 35px 17px; background: #ffffff; }
+
+.istekDetayIcerik .istekUrunDetay .urunBaslik { display: inline-block; float: left; width: 50%; text-decoration: none; color: #393737; font-size: 13px; font-weight: 500; }
+
+.istekDetayIcerik .istekUrunDetay .urunBaslik .hsbmSpan { display: block; font-weight: normal; font-size: 12px; margin-top: 5px; }
+
+.istekDetayIcerik .istekUrunDetay .istekUrunDetaySag { float: right; width: 50%; text-align: right; }
+
+.istekDetayIcerik .istekUrunDetay .istekUrunDetaySag .istekUrunFiyat { display: inline-block; color: #393737; font-size: 13px; line-height: 15px; vertical-align: middle; }
+
+.istekDetayIcerik .istekUrunDetay .istekUrunDetaySag .istekUrunDurum { display: inline-block; margin-left: 20px; color: #393737; font-size: 13px; line-height: 15px; vertical-align: middle; }
+
+.istekDetayIcerik .istekUrunDetay .istekUrunDetaySag .iptalEt { display: inline-block; margin-left: 20px; color: #fc5f5e; font-size: 15px; line-height: 15px; vertical-align: middle; }
+
+.mailGonderGenelAlan { background-color: white; padding: 10px; display: inline-block; width: 100%; margin: 15px 0px; }
+
+.mailGonderGenelAlan .tags { margin-bottom: 10px; }
+
+.mailGonderGenelAlan .tags a { display: inline-block; padding: 0.5em .6em .5em; font-size: 80%; font-weight: 700; line-height: 1; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: .25em; background-color: #5bc0de; color: white; margin-right: 10px; cursor: pointer; }
+
+.mailGonderGenelAlan .istekMailGonder { text-align: right; margin-top: 20px; }
+
+.mailGonderMailMesaj i { font-size: 17px; }
+
+.tagAddGenelAlan { width: 100%; }
+
+.tagAddGenelAlan input { width: 75%; }
+
+.addTagButon { line-height: 30px; padding: 0 15px; margin-left: 10px; }
+
+
+/* ================================================ */
+/* ! FIYAT ALARM LISTEM                             */
+/* ================================================ */
+.fiyatAlarmListem { float: left; width: 100%; }
+
+/* ================================================ */
+/* ! PARA PUANLARIM                                 */
+/* ================================================ */
+.paraPuanSayfasi { float: left; width: 100%; }
+
+.puanlamaBolumu { float: left; width: 100%; margin-bottom: 15px; }
+
+.puanlamaBolumu .blokRow2 { margin: 0 -2.5px; }
+
+.puanlamaBolumu .blok { float: left; width: 25%; padding: 0 2.5px; margin-bottom: 5px; }
+
+.puanlamaBolumu .blok span { display: block; padding-left: 70px; position: relative; height: 50px; font-size: 12px; font-weight: 500; color: #ffffff; }
+
+.puanlamaBolumu .blok span strong { display: block; font-size: 20px; font-weight: bold; }
+
+.puanlamaBolumu .blok span .fa { width: 50px; height: 50px; text-align: center; line-height: 50px; color: #ffffff; font-size: 20px; position: absolute; left: 0; top: 0; }
+
+.puanlamaBolumu .blok span.mavi { background: #62adee; }
+
+.puanlamaBolumu .blok span.mavi .fa { background: #69b8fc; }
+
+.puanlamaBolumu .blok span.yesil { background: #73b11f; }
+
+.puanlamaBolumu .blok span.yesil .fa { background: #81c624; }
+
+.puanlamaBolumu .blok span.gri { background: #6e7a8a; }
+
+.puanlamaBolumu .blok span.gri .fa { background: #818d9e; }
+
+.puanlamaBolumu .blok span.sari { background: #f7cb38; }
+
+.puanlamaBolumu .blok span.sari .fa { background: #ffd857; }
+
+.puanlamaBolumu .blok span.kirmizi { background: #df412b; }
+
+.puanlamaBolumu .blok span.kirmizi .fa { background: #f34831; }
+
+.kuponOlustur { float: left; width: 100%; margin-bottom: 20px; }
+
+.kuponOlustur .kuponOlusturYazi { display: inline-block; float: left; margin-right: 20px; line-height: 40px; color: #393737; font-size: 15px; font-weight: 500; }
+
+.kuponOlustur .kuponInput { float: left; width: 80px; height: 40px; background: #ffffff; border: 1px solid #ffffff; color: #393737; font-size: 13px; padding: 0 10px; margin-right: 20px; }
+
+.kuponOlustur .kuponInput:focus { border-color: #393737; outline: 0 !important; }
+
+.kuponOlustur .kuponOlusturButon { display: inline-block; border: none; float: left; height: 40px; line-height: 40px; background: #393737; padding: 0 20px; color: #ffffff; font-size: 14px; text-decoration: none; }
+
+/* ================================================ */
+/* ! PARA PUANLARIM DETAY                           */
+/* ================================================ */
+.paraPuanDetaySayfasi { float: left; width: 100%; }
+
+/* ================================================ */
+/* ! HEDIYE CEKLERIM SAYFASI                        */
+/* ================================================ */
+.hediyeCeklerim { float: left; width: 100%; }
+
+/* ================================================ */
+/* ! DESTEK TALEPLERIM                              */
+/* ================================================ */
+.destekTaleplerim { float: left; width: 100%; }
+
+.destekTalebiBilgileri { float: left; width: 100%; background: #ffffff; margin-bottom: 20px; padding: 20px; }
+
+.destekTalebiBilgileri .hsbmSpan { display: block; margin-bottom: 15px; padding-left: 110px; position: relative; line-height: 17px; font-size: 13px; color: #393737; }
+
+.destekTalebiBilgileri .hsbmSpan strong { display: inline-block; position: absolute; left: 0; top: 0; color: #fc5f5e; font-size: 13px; line-height: 17px; font-weight: bold; }
+
+.destekTalebiBilgileri .hsbmSpan:last-child { margin-bottom: 0; }
+
+.destekAdminCevap { float: left; width: 100%; background: #ffffff; margin-bottom: 20px; padding: 20px; border-left: 3px solid #62adee; }
+
+.destekAdminCevap .zaman { display: block; font-size: 13px; color: #393737; margin-bottom: 15px; }
+
+.destekAdminCevap p { display: block; margin: 0 0 15px 0; padding: 0; color: #393737; font-size: 13px; line-height: 1.3; }
+
+.destekAdminCevap .isim { display: block; color: #62adee; font-weight: bold; font-size: 13px; }
+
+.destekMusteriCevap { float: left; width: 100%; background: #ffffff; margin-bottom: 20px; padding: 20px; border-left: 3px solid #6e7a8a; }
+
+.destekMusteriCevap .zaman { display: block; font-size: 13px; color: #393737; margin-bottom: 15px; }
+
+.destekMusteriCevap p { display: block; margin: 0 0 15px 0; padding: 0; color: #393737; font-size: 13px; line-height: 1.3; }
+
+.destekMusteriCevap .isim { display: block; color: #6e7a8a; font-weight: 500; font-size: 13px; }
+
+.destekCevapYaz { float: left; width: 100%; margin-bottom: 20px; }
+
+.destekCevapYaz textarea { background: #fff; }
+
+.yeniDestekTalebiForm { display: none; }
+
+/* ================================================ */
+/* ! HAVALE BILDIRIM FORMU                          */
+/* ================================================ */
+.havaleBildirimFormu { float: left; width: 100%; }
+
+/* ================================================ */
+/* ! SIPARIS TAKIP SAYFASI                          */
+/* ================================================ */
+.siparisTakipSayfasi { float: left; width: 100%; background-color: #fff; padding: 15px; }
+
+.siparisTakipSayfasi .siparisTakipBaslik { float: left; width: 100%; padding-bottom: 10px; border-bottom: 1px solid #eeeeee; margin-bottom: 65px; }
+
+.siparisTakipSayfasi .siparisTakipBaslik h3 { display: block; padding: 0; margin: 0; font-size: 18px; font-weight: 500; color: #2b2a2a; }
+
+.siparisTakipSolBolum { float: left; width: 40%; padding-right: 60px; border-right: 1px solid #eeeeee; }
+
+.satirBlok2 { float: left; width: 100%; margin-bottom: 15px; }
+
+.satirBlok2:after { clear: both; display: table; content: ""; }
+
+.satirBlok2 .hsbmSpan { color: #2b2a2a; font-size: 13px; margin-bottom: 10px; display: block; }
+
+.satirBlok2 .satirBlokSag { }
+
+.satirBlok2 .hsbmTextbox { background: #efefef; height: 40px; }
+
+.satirBlok2 .hsbmPassword { background: #efefef; height: 40px; }
+
+.satirBlok2 .uyariSpan { display: block; color: #2b2a2a; font-size: 12px; line-height: 20px; margin-top: 5px; clear: left; }
+
+.siparisTakipSagBolum { float: left; width: 60%; padding-left: 60px; }
+
+.siparisDurumBilgileri { float: left; width: 50%; margin-bottom: 50px; clear: left; }
+
+.siparisDurumBilgileri .bilgiSatir { float: left; width: 100%; border-top: 1px solid #eeeeee; }
+
+.siparisDurumBilgileri .bilgiSatir:first-child { border-top: none; }
+
+.siparisDurumBilgileri .bilgiSatir span { display: block; padding: 20px 0; font-weight: 500; color: #2b2a2a; font-size: 13px; }
+
+.siparisDurumBilgileri .bilgiSatir span strong { display: inline-block; width: 115px; }
+
+.siparisTakipDetayi { float: left; width: 100%; }
+
+.siparisTakipDetayi .siparisTutucu { float: left; width: 100%; margin-bottom: 20px; }
+
+.siparisTakipDetayi .siparisTutucu .siparisResim { float: left; width: 20%; padding-right: 20px; }
+
+.siparisTakipDetayi .siparisTutucu .siparisResim img { width: 100%; display: block; }
+
+.siparisTakipDetayi .siparisTutucu .siparisBilgi { float: left; width: 80%; background: #efefef; padding: 20px; }
+
+.siparisTakipDetayi .siparisTutucu .siparisBilgi .siparisBilgiSol { float: left; width: 50%; }
+
+.siparisTakipDetayi .siparisTutucu .siparisBilgi .siparisBilgiSol span { display: block; color: #2b2a2a; font-weight: 500; font-size: 13px; }
+
+.siparisTakipDetayi .siparisTutucu .siparisBilgi .siparisBilgiSol span strong { display: block; margin-top: 7px; font-weight: normal; }
+
+.siparisTakipDetayi .siparisTutucu .siparisBilgi .siparisBilgiSag { float: left; width: 50%; }
+
+.siparisTakipDetayi .siparisTutucu .siparisBilgi .siparisBilgiSag span { display: block; color: #2b2a2a; font-weight: normal; font-size: 13px; margin-bottom: 10px; }
+
+.siparisTakipDetayi .siparisTutucu .siparisBilgi .siparisBilgiSag span strong { display: inline-block; width: 55px; font-weight: 500; }
+
+.siparisTakipDetayi .siparisBlokRow { margin: 0 -10px; }
+
+.siparisTakipDetayi .siparisIkiliBlok { float: left; width: 50%; padding: 0 10px; }
+
+.siparisTakipDetayi .siparisAdres { float: left; width: 100%; background: #efefef; padding: 20px; margin-bottom: 20px; }
+
+.siparisTakipDetayi .siparisAdres .siparisAdresBaslik { display: block; color: #2b2a2a; font-size: 13px; font-weight: 500; margin-bottom: 10px; }
+
+.siparisTakipDetayi .siparisAdres p { font-size: 12px; color: #2b2a2a; font-weight: normal; line-height: 20px; padding: 0; margin: 0; }
+
+.siparisTakipDetayi .siparisEkstresi { float: left; width: 100%; background: #efefef; padding: 20px; }
+
+.siparisTakipDetayi .siparisEkstresi .ekstreBaslik { display: block; color: #2b2a2a; font-size: 13px; font-weight: 500; margin-bottom: 13px; }
+
+.siparisTakipDetayi .siparisEkstresi .ekstreTutar { display: block; color: #2b2a2a; font-size: 12px; font-weight: normal; margin-bottom: 13px; }
+
+.siparisTakipDetayi .siparisEkstresi .ekstreTutar strong { float: right; font-weight: normal; }
+
+.siparisTakipDetayi .siparisEkstresi .ekstreGenelToplam { float: left; width: 100%; border-top: 1px solid #d5d5d5; padding-top: 15px; margin-top: 10px; }
+
+.siparisTakipDetayi .siparisEkstresi .ekstreGenelToplam span { display: block; color: #2b2a2a; font-size: 13px; font-weight: normal; }
+
+.siparisTakipDetayi .siparisEkstresi .ekstreGenelToplam span strong { float: right; font-weight: 500; color: #f3454b; }
+
+.siparisKargolari { display: block; width: 100%; clear: both; }
+
+.siparisKargolari:after { clear: both; display: table; content: ""; }
+
+.siparisKargoItem { background-color: #f2f2f2; padding: 10px; display: block; float: left; width: 100%; cursor: pointer; }
+
+.kargoItemHeader { text-align: center; font-weight: 600; font-size: 18px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+
+.kargoItemTable { display: block; float: left; width: 100%; padding: 5px 0; border-bottom: 1px solid #ddd; }
+
+.kargoItemTable > div { float: left; }
+
+.siparisKargoItemFirst .kargoItemTable > div > span { line-height: normal; font-size: 12px; display: block; }
+
+.siparisKargoItemFirst .kargoItemTable > div > span a { line-height: normal; font-size: 12px; text-decoration: underline; }
+
+.siparisKargoItemFirst .kargoItemTable > div.row1 { width: 145px; }
+
+.siparisKargoItemFirst .kargoItemTable > div.row2 { width: 145px; }
+
+.siparisKargoItemFirst .kargoItemTable > div.row3 { width: 100px; }
+
+.siparisKargoItemFirst .kargoItemTable > div.row4 { width: 100px; }
+
+.siparisKargoItemFirst .kargoItemTable > div.row5 { width: 145px; }
+
+.siparisKargoItemFirst .kargoItemTable > div.row6 { width: 145px; }
+
+.siparisKargoItemLast:after { clear: both; display: table; content: ""; }
+
+.siparisKargoItemLast { background-color: #e0e0e0; clear: both; display: none; }
+
+.siparisKargoItem.active .siparisKargoItemLast { display: block; }
+
+.siparisKargoItemLastLeft { float: left; width: 100%; display: block; }
+
+.siparisKargoRow:after { clear: both; display: table; content: ""; }
+
+.siparisKargoRow { padding: 8px 10px; clear: both; display: block; border-bottom: 1px solid #d5d5d5; }
+
+.siparisKargoRow .kargoUrunName { float: left; width: 80%; font-size: 12px; }
+
+.siparisKargoRow .kargoUrunName a { font-size: 12px; }
+
+.siparisKargoRow .kargoUrunCount { float: left; width: 20%; }
+
+.siparisKargoRow .kargoUrunCount span { line-height: normal; font-size: 11px; }
+
+
+
+/* ================================================ */
+/* ! SİPAİRİŞ ANKET POPUP                           */
+/* ================================================ */
+
+div#siparisAnkenContainer { background-color: #fff; padding: 10px; }
+h2.anketTittle { font-size: 13px; }
+.anket.description { font-size: 13px; }
+.anketFieldset { border: 0; }
+.anketFieldset h3 { font-size: 13px; }
+
+.anketFieldset label { font-size: 13px; }
+div#siparisAnkenContainer .button { display: block; width: 100%; }
+/* ================================================ */
+/* ! POPUP                                          */
+/* ================================================ */
+.hsbmPopup { float: left; width: 500px; display: none; }
+
+.hsbmPopup h5 { display: block; margin: 0 0 10px 0; color: #393737; font-weight: 500; font-size: 16px; }
+
+.hsbmPopup span { display: block; font-size: 12px; margin-bottom: 5px; color: #393737; }
+
+.iadeTalebiPopup { float: left; width: 100%; }
+
+.iadeTalebiPopup .blok { margin-bottom: 15px; }
+
+.iadeTalebiPopup .blok:last-child { margin-bottom: 0; }
+
+.epostaGonderPopup { float: left; width: 100%; }
+
+/* ================================================ */
+/* ! BACK END OZEL ISTEKLER                         */
+/* ================================================ */
+.displayNone { display: none; }
+
+.displayBlock { display: block; }
+
+.tableRowNotDisplay { height: 0px; overflow: hidden; display: block; }
+
+.tableRowDisplay { height: auto; }
+
+
+.istekSil { color: #fc5f5e; margin-left: 15px; display: inline-block; color: #fc5f5e; font-size: 15px; line-height: 15px; }
+
+.hsbmAdresFancyTutucu { padding-left: 0 !important; width: 100% !important; }
+
+.hsbmTel { padding-left: 40px !important; }
+
+.sagIcerikTutucu .intl-tel-input { width: 100% !important; float: left !important; }
+
+.intl-tel-input .hsbmTextbox { width: 100% !important; }
+
+.adresDuzenlemeTutucu .sagIcerikTutucu { width: 100%; padding-top: 30px; padding-left: 0px; }
+
+.hesabimMenuKapat { display: none; }
+
+.hesabimMenuDon { display: none; border: 1px solid #333; padding: 5px; font-size: 13px; color: #000; margin-bottom: 10px; float: left; clear: left; text-decoration: none; }
+
+.hesabimMenuDon .fa { margin-right: 3px; font-size: 15px; }
+
+.istekDetayIcerik { margin-bottom: 10px; }
+
+.siparislerim .hesabimTablo .ustListe .siparisListe { position: relative; }
+
+.siparislerim .hesabimTablo .ustListe .siparisListe:not(.tdTutucuBeyaz):after { content: '\f107'; font-family: 'FontAwesome'; font-size: 15px; position: absolute; right: 10px; top: 50%; margin-top: -7px; }
+
+.istekListelerim .hesabimTablo .ustListe .wishListe { position: relative; }
+
+#wishID1000 > div.tdTutucu.tdTutucuBeyaz.wishListe > div:nth-child(1),
+#divIcerik > div > div > div.sagIcerikTutucu.ng-scope > div > div > div > div > div.hesabimTablo > div.tdTutucu.tabloBasliklari > div:nth-child(1) { width: 10%; }
+
+.istekListelerim .hesabimTablo .trTutucu5 { width: 22%; }
+
+/*.istekListelerim .hesabimTablo .ustListe .wishListe:after { content: '\f107'; font-family: 'FontAwesome'; font-size: 15px; position: absolute; right: 10px; top: 50%; margin-top: -7px; }*/
+
+.sagIcerikBolumu .fa { margin-right: 5px; }
+
+@media screen and (max-width: 768px) {
+    .mobilAcmaBolumu { display: block; }
+
+    .solAnaMenu { width: 100%; margin-bottom: 10px; }
+
+    .sagIcerikTutucu { width: 100%; padding: 0; }
+
+    .solAnaMenu ul li a { font-size: 13px; line-height: 31px; }
+
+    .icerikIkiliBlok { width: 100%; }
+
+    .sagIcerikTutucu .satirBlok .hsbmSpan { display: block; width: 100%; line-height: 25px; }
+
+    .sagIcerikTutucu .satirBlok { margin-bottom: 7px; }
+
+    .sagIcerikTutucu .satirBlok .hsbmPassword, .sagIcerikTutucu .satirBlok .hsbmSelect, .sagIcerikTutucu .selectGrup, .sagIcerikTutucu .satirBlok .hsbmTextarea, .sagIcerikTutucu .satirBlok .hsbmTextbox { width: 100%; }
+
+    .sagIcerikTutucu .satirBlok .hsbmLabel { line-height: 25px; }
+
+    .sagIcerikTutucu .satirBlok .hsbmLabel .hsbmRadio { margin-top: 7px; }
+
+    .sagIcerikTutucu .satirBlok .hsbmLabel .hsbmCheckbox { margin-top: 7px; }
+
+    .sagIcerikTutucu .selectGrup .ikiliSelect { width: 100%; margin-bottom: 5px; }
+
+    .faturaTipi .hsbmSpan { display: none !important; }
+
+    .adresBlok { width: 100%; }
+
+
+    .siparisUrun .siparisDetayBilgileri .solDetay { width: 100%; }
+
+    .siparisUrun .siparisDetayBilgileri .sagDetay { width: 100%; }
+
+    .tabIcerik { padding: 0; background-color: transparent; }
+
+    .sagIcerikTutucu .sagIcerikBolumu { padding: 10px; }
+
+    .siparisAdresDetaylari .blok { width: 100%; }
+
+    .siparisAdresDetaylari .siparisDetayButonlari a { margin-left: 3px; margin-bottom: 3px; }
+
+    .siparisAdresDetaylari .blok .blokIcerik { min-height: 100%; background-color: #fff; }
+
+    .tabLink { border-bottom: 2px solid #393737; }
+
+    .tabLink a { font-size: 12px; padding: 0 10px; }
+
+    .istekDetayIcerik .istekUrunResmi { width: 100%; padding: 0; }
+
+    .istekDetayIcerik .istekUrunDetay { width: 100%; }
+
+    .istekDetayIcerik .istekUrunDetay .urunBaslik { width: 100%; margin-bottom: 10px; }
+
+    .istekDetayIcerik .istekUrunDetay .istekUrunDetaySag { width: 100%; text-align: left; }
+
+    .istekDetayIcerik .istekUrunDetay .istekUrunDetaySag .istekUrunFiyat, .istekDetayIcerik .istekUrunDetay .istekUrunDetaySag .istekUrunDurum { margin-left: 0; margin-right: 7px; }
+
+    .istekDetayIcerik .istekUrunDetay .istekUrunDetaySag .iptalEt { margin: 0; }
+
+    .hesabimTablo thead { display: none; }
+
+    .hesabimTablo tbody tr td { float: left; width: 100%; }
+
+    .hesabimTablo tr td:last-child { border-bottom: 1px solid #393737; }
+
+    .hesabimTablo tbody tr td:before { content: attr(data-baslik); display: inline-block; width: 35%; color: #393737; font-size: 13px; vertical-align: middle; }
+
+    .hesabimTablo tbody tr.tabloGri td { border-top: 2px solid #ffffff; }
+
+    .hesabimTablo tbody tr.tabloBeyaz td { border-top: 2px solid #f2f2f2; }
+
+    .hesabimTablo tbody tr.tabloGriDetay td { padding: 5px; }
+
+    .hesabimTablo tbody tr.tabloBeyazDetay td { padding: 5px; }
+
+    .hesabimTablo tbody tr.satirBosluk td { padding: 5px; }
+
+    .puanlamaBolumu .blok { width: 100%; }
+
+    .hesabimAnasayfaMenuler ul li { width: 50%; }
+
+    .hesabimAnasayfaMenuler ul li a { padding: 77px 0 30px 0; font-size: 14px; }
+
+    .hesabimAnasayfaMenuler ul li a .fa { top: 20px; }
+
+    .siparisTakipSolBolum { width: 100%; padding: 0px; }
+
+    .siparisTakipSagBolum { width: 100%; padding: 0px; }
+
+    .siparisDurumBilgileri { width: 100%; }
+
+    .satirBlok2 .hsbmSpan { width: 100%; line-height: 1.3; margin-bottom: 5px; }
+
+    .satirBlok2 .satirBlokSag { width: 100%; }
+
+    .siparisTakipDetayi .siparisTutucu .siparisResim { width: 100%; padding: 0; }
+
+    .siparisTakipDetayi .siparisTutucu .siparisBilgi { width: 100%; }
+
+    .siparisTakipDetayi .siparisIkiliBlok { width: 100%; }
+
+    .hsbmPopup { width: 100%; }
+
+    .intl-tel-input { width: 100% !important; }
+
+    .sagIcerikTutucu .satirBlok .satirBlokSag { width: 100%; }
+
+    .hesabimTablo { width: 100%; float: left; }
+
+    .hesabimTablo tbody tr.satirBosluk td { max-width: 100%; }
+
+    .solAnaMenu { display: none !important; }
+
+    .solAnaMenu.acik { display: block !important; }
+
+    .griButon, .yesilButon, .kirmiziButon { margin-left: 3px; margin-bottom: 3px; font-size: 11px; padding: 0 10px; line-height: 29px; }
+
+    .hesabimMenuDon { display: block !important; }
+
+    .hesabimTablo .tdTutucu.tabloBasliklari { display: none; }
+
+    .siparisUrun .urunResmin a img { height: auto !important; }
+
+    .hesabimTablo .tdTutucu .trTutucu { float: left; width: 100% !important; }
+
+    .hesabimTablo .tdTutucu .trTutucu:before { content: attr(data-baslik); display: inline-block; width: 35%; font-weight: 600; color: #393737; font-size: 13px; vertical-align: middle; }
+
+    .hesabimTablo .tdTutucu .trTutucu span { display: inline-block; }
+
+    .siparisUrun { padding: 0 10px; background-color: #fff; }
+
+    .siparisUrun .urunResmin { background-color: #fff; }
+
+    .divMobilTumunuSec { display: block !important; font-weight: 600; }
+
+    .hesabimMobilCari { display: block !important; width: 100%; clear: both; float: left; }
+}
+
+
+
+
+
+/* ###################### ANGULAR ANIMATE (SHOW HIDE) #################### Silinmeyecek. */
+
+/* when hiding the thing */
+.ng-hide-add { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-name: fadeOut; animation-name: fadeOut; }
+
+/* when showing the thing */
+.ng-hide-remove { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-name: fadeIn; animation-name: fadeIn; }
+
+/* ANIMATIONS (FROM ANIMATE.CSS) */
+
+/* flip in */
+
+
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+
+    to { opacity: 1; }
+}
+
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+
+    to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+
+    to { opacity: 0; }
+}
+
+
+
+
+
+.siparisTabContent .urunTabAlt { max-height: inherit; overflow: auto; }
+
+.orderDetailadresDetayBox { float: left; width: 100%; }
+
+.orderDetail { width: 100% !important; }
+
+.siparisTabContent * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.orderContent { line-height: 18px; }
+
+.orderStatus ul { background: url('Images/status-step-bg.jpg') no-repeat 0 0; float: left; width: 100%; background-color: #f6f6f6; border: 1px solid #eee; overflow: hidden; }
+
+.orderStatus > ul > li { clear: none; margin-bottom: 0; }
+
+.orderStatus ul li { float: left; width: 25%; height: 98px; background: url('Images/status-step-arrow.png') no-repeat right top; }
+
+.orderStatus .act-step { background-color: #fff; height: 98px; width: 25%; }
+
+.orderStatus li:last-child { background: url('Images/status-step-arrow.jpg') #fff no-repeat right top; }
+
+.orderStatus ul li .step-title { display: block; text-align: center; line-height: 17px; color: #262626; font-size: 12px; }
+
+.orderStatus ul li .step-date { display: block; text-align: center; line-height: 15px; color: #262626; font-size: 12px; }
+
+.orderStatus .act-step i { background: url('Images/status-step-iconset.png') no-repeat 0 0; width: 50px; margin: 20px auto 10px auto; display: block; }
+
+.orderStatus .act-step .step-01 { background-position: 10px 6px; height: 31px; }
+
+.orderStatus .act-step .step-02 { background-position: 0 -24px; height: 31px; width: 28px; }
+
+.orderStatus .act-step .step-03 { background-position: 10px -57px; height: 31px; }
+
+.orderStatus .act-step .step-04 { background-position: 0 -90px; height: 31px; }
+
+.orderStatus .act-step .step-05 { background-position: 10px -153px; height: 31px; }
+
+.orderStatus .act-step .step-06 { background-position: 0 -120px; height: 31px; }
+
+.orderStatus i { background: url('Images/status-stap-bg_passive.png') no-repeat 0 0; width: 50px; margin: 20px auto 10px auto; display: block; }
+
+.orderStatus .step-03 { height: 31px; }
+
+.orderStatus .step-04 { background-position: 0 -31px; height: 31px; }
+
+.orderStatus .step-05 { background-position: 0 -60px; height: 29px; }
+
+.labelBox { display: block; height: 25px; height: 25px; width: 100%; margin-bottom: 3px; }
+
+.labelBox .field-validation-error { background: url(images/errorNote-corner.png) no-repeat right top; height: 25px; line-height: 22px; display: inline-block; padding: 0 10px 0 0; font-size: 11px; float: right; margin-right: 10px; }
+
+.button-info { float: left; margin: 10px 0 10px 0; }
+
+.onlineHelp, .whereCargo, .siparisIptal, .siparisTekrar { cursor: pointer; position: relative; }
+
+.onlineHelp i, .whereCargo i, .siparisIptal i, .siparisTekrar i { color: #FF630E; font-size: 26px; font-weight: 400; position: absolute; right: 22px; top: 6px; }
+
+
+.addressUpdate { margin-left: 16px !important; }
+
+.whereCargo span { width: 165px; height: 20px; margin: 7px 10px; display: block; background: url('Images/cargo-icon.png') no-repeat top right; font-size: 12px; font-weight: normal; line-height: 24px; }
+
+.siparisIptal span { width: 165px; height: 20px; margin: 7px 10px; display: block; background: url('Images/siparis-iptal.png') no-repeat top right; font-size: 12px; font-weight: normal; line-height: 24px; }
+
+.siparisTekrar span { width: 165px; height: 20px; margin: 7px 10px; display: block; background: url('Images/siparis-tekrar.png') no-repeat top right; font-size: 12px; font-weight: normal; line-height: 24px; }
+
+.productInfo { float: left; width: 100%; margin: 15px 0 0 0; }
+
+.productInfo .prd-image { display: block; float: left; width: 60px; }
+
+.productInfo .prd-name { display: table; float: left; width: 238px; height: 78px; margin: 0 10px; }
+
+.productInfo .prd-size { display: table; float: left; width: 80px; height: 78px; margin: 0 10px; }
+
+.productInfo .prd-count { display: table; float: left; width: 80px; height: 78px; margin: 0 10px; }
+
+.productInfo .prd-price { display: table; float: left; width: 100px; height: 78px; text-align: right; margin-right: 10px; font-size: 13px; color: #262626; }
+
+.productInfo .prd-name p, .productInfo .prd-size p, .productInfo .prd-count p, .productInfo .prd-price p { width: 100%; display: table-cell; vertical-align: middle; font-weight: normal; }
+
+.productInfo .prd-name p span, .productInfo .prd-size p span, .productInfo .prd-count p span, .productInfo .prd-price p span { width: 100%; display: block; font-weight: 400; }
+
+.productInfo .prd-name p .title { color: #262626; font-size: 13px; margin-bottom: 5px; font-weight: 600; }
+
+.productInfo .prd-name p .value { line-height: 18px; }
+
+.productInfo .prd-size p .title, .productInfo .prd-size p .value, .productInfo .prd-count p .title, .productInfo .prd-count p .value { text-align: center; }
+
+.orderContent .adresDetayBox { float: left; margin: 25px 0 0 0; display: table; width: 100%; height: 100%; border-collapse: separate; border-spacing: 0 15px; }
+
+.orderContent .adresDetayBox .adresDetayContent { display: table-row; }
+
+.orderContent .cloudBox { display: table-cell; background: #fff; border: 5px solid #F2F2F0; padding: 20px; margin-right: 5px; margin-left: 5px; border-radius: 4px; vertical-align: top; *float: left; *padding: 20px 10px; }
+
+.addressBox { position: relative; display: table-cell; width: 33.33%; *float: left; *padding: 20px 10px; }
+
+.addressBox p, .priceBox p { position: absolute; top: -20px; left: 0; display: block; font-size: 12px; color: #262626; font-weight: 600; }
+
+.addressBox span { font-size: 12px; width: 160px; overflow: hidden; display: block; }
+
+.addressBox .statusBox { padding: 20px; }
+
+.priceBox { position: relative; display: table-cell; width: 33%; margin: 15px 0 0 0; }
+
+.priceBox label { width: 100%; float: left; display: block; margin-bottom: 5px; font-size: 11px; color: #2b2b2b; }
+
+.priceBox label .discount { float: left; font-size: 11px; width: 100px; height: 20px; overflow: hidden; }
+
+.priceBox label span { float: right; padding-right: 5px; font-size: 11px; }
+
+.priceBox .separator { width: 100%; height: 1px; background: url('Images/pricebox-seperator.png') no-repeat top center; }
+
+.priceBox .total-price { margin-top: 5px; font-size: 14px; font-weight: 600; }
+
+.priceBox .total-price span { color: #000000; font-size: 14px; }
+
+.orders { float: left; }
+
+.orders h3 { float: left; display: block; width: 100%; font-size: 18px; margin-bottom: 20px; }
+
+.orders .order-title { float: left; display: table; width: 100%; padding: 10px 0; }
+
+.orders .order-title span { width: 125px; display: inline-block; color: #000000; font-size: 13px; font-weight: 600; }
+
+.orders .order-title span:first-child { width: 150px; padding-left: 20px; padding-right: 5px; }
+
+.orders .order-title span.order-no { width: 100px; padding-left: 0; }
+
+.orders .order-title span.order-status { width: 140px; }
+
+.orders .order-title span:last-child { width: 20px; }
+
+.orders .order-title .order-no { }
+
+.orders .order-list { float: left; width: 100%; margin-bottom: 10px; }
+
+.orders .order-info { width: 100%; padding: 5px 0 5px 0; cursor: pointer; }
+
+.orders .active .order-info { width: 100%; border: 1px solid #e6e6e6; }
+
+.orders .order-info i { float: right; display: block; width: 15px; height: 22px; background: url('order-toggle-icon.png') no-repeat left 2px; cursor: pointer; }
+
+.orders .active .order-info i { background-position: left -15px; }
+
+.orders .order-list .order-info { display: table; background-color: #f2f2f0; }
+
+.orders .order-list .order-info span { display: inline-block; width: 125px; font-size: 12px; color: #333; vertical-align: middle; padding: 8px 0 0 0; }
+
+.orders .order-list .order-info span:first-child { width: 150px; padding-left: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding-right: 5px; }
+
+.orders .order-list .order-info span.order-no { width: 100px; }
+
+.orders .order-list .order-info span.order-status { width: 140px; }
+
+.orders .order-list .order-info span:last-child { width: 10px; }
+
+.orders .order-list .order-info .order-arrow { width: 10px; float: right; margin-right: 15px; }
+
+.orders .order-detail { float: left; width: 100%; background-color: #f2f2f0; border: 1px solid #e6e6e6; border-top: none; padding: 20px 18px; display: none; }
+
+.order-detail { border-bottom: 1px solid #fff; }
+
+.order-detail .orderContent { width: 100%; margin: 0 auto; }
+
+.order-detail .orderContent .orderDetail { padding: 5px 0; color: #424242; overflow: hidden; display: block; }
+
+.order-detail .orderStatus { clear: both; padding-bottom: 15px; }
+
+.order-detail .orderStatus:After { clear: both; display: table; content: ""; }
+
+.order-detail .orderStatus h3 { float: left; text-align: right; padding-right: 10px; padding-left: 5px; font-style: italic; }
+
+.order-detail .statusBox { background: #fff; border: 1px solid #e6e6e6; display: inline-block; padding: 5px 10px; color: #000; min-height: 30px; float: left; margin-right: 5px; border-radius: 4px; overflow: hidden; }
+
+.statusBox.img { width: 8.9%; }
+
+.statusBox.text { width: 89%; margin-right: 0; float: right; }
+
+.order-detail .statusBox p { font-size: 12px; }
+
+.order-detail .statusBox img { float: left; }
+
+
+
+/*Cari Raporlarý*/
+
+.carialt-s2:after { clear: both; display: table; content: ""; }
+
+@media(max-width:768px) {
+
+    .orders .order-title span.order-no { width: 20%; }
+    .orders .order-title span { width: 25%; }
+    .orders .order-title.sepetBolmeBaslik span { width: 15%; }
+    .sepetBolmeBaslik .cart-checkbox { width: 50px !important; }
+    .orders .order-title span.order-status { width: 20%; }
+    .orders .order-list .order-info span.order-no { width: 20%; padding-left:0; }
+    .orders .order-list .order-info span { width: 25%; line-height:normal;font-size:10px; }
+    .orders .order-list .order-info.sepetBolmeBaslik span { width: 15%;  }
+    .orders .order-list .order-info span.order-status { width: 20%; }
+    .orders .order-detail { padding: 8px; border: 0; }
+    .orderStatus .act-step { width: 50%; }
+    .orderStatus ul li { background: none; }
+    .statusBox.img { width: 16%; margin-right: 0; }
+    .order-detail .statusBox img { max-width: 100%; height: auto; }
+    .statusBox.text { width: 80%; }
+    .productInfo .prd-name { height: 64px; }
+
+    .productInfo .prd-size p .title, .productInfo .prd-size p .value, .productInfo .prd-count p .title, .productInfo .prd-count p .value { text-align: left; width: auto; display: inline-block; }
+
+    .productInfo .prd-name, .productInfo .prd-count, .productInfo .prd-price { width: 100%; text-align: left; }
+
+    .productInfo .prd-size, .productInfo .prd-count, .productInfo .prd-price { width: auto; text-align: left; height: auto; }
+
+    .productInfo .prd-price { margin-left: 10px; }
+
+    .priceBox, .addressBox, .cloudBox { width: 100%; display: block !important; height: 130px; }
+
+    .addressBox p, .priceBox p { position: relative; }
+}
+
+@media(max-width:768px) {
+    .hesabimTablo .tdTutucu.tdTutucuBeyaz { background-color: transparent; }
+    .orders .order-list .order-info { background-color: #fff; }
+    .statusBox.img { width: 15%; }
+}
+
+@media screen and (max-width: 380px) {
+    .sagIcerikTutucu .sagIcerikBolumu .anaBaslik { padding-bottom: 5px; margin-bottom: 5px; font-size: 13px; }
+    .siparisUrun { margin-bottom: 10px; }
+    .siparisUrun .urunResmin { padding: 5px 0 5px 5px; }
+    .siparisUrun .urunResmin a { height: auto; }
+    .siparisUrun .siparisDetayBilgileri { padding: 5px 0 5px 5px; }
+    .siparisUrun .siparisDetayBilgileri a { font-size: 11px; }
+    .siparisUrun .siparisDetayBilgileri .hsbmSpan { margin-bottom: 4px; }
+    .siparisUrun .siparisDetayBilgileri .hsbmSpan strong { font-size: 11px; }
+    .orders .order-title span { font-size: 10px; }
+    .orders .order-list .order-info span { font-size: 10px; }
+    .griButon, .yesilButon, .kirmiziButon { padding: 0 4px; font-size: 9px; line-height: 22px; }
+}
+
+.siparislerim-ustButon { padding: 0 10px; margin-left: 10px; line-height: 30px; font-size: 13px; }

@@ -1,0 +1,37 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}{{ data[0].title }} | {{ datacategory[0].title }}{% endblock %}
+{% block keywords %}{{ datacategory[0].keywords }}{% endblock %}
+{% block description %}{{ datacategory[0].description }}{% endblock %}
+
+{% block body %}
+<div class="agileinfo-ads-display col-lg-9">
+    <div class="wrapper">
+    <!-- second section -->
+    <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+        <h3 class="heading-tittle text-center font-italic">{{ datacategory[0].title }}</h3>
+        <div class="row">
+            {% for rs in products %}
+            <div class="col-md-4 product-men mt-5">
+                <div class="men-pro-item simpleCart_shelfItem">
+                    <div class="men-thumb-item text-center">
+                        <a href="{{ path('product_detail', {'id':  rs.id}) }}"><img src="{{ asset('uploads') }}/images/{{ rs.image }}" alt="" height="100"></a>
+                    </div>
+                    <div class="item-info-product text-center border-top mt-4">
+                        <h4 class="pt-1">
+                            <a href="{{ path('product_detail', {'id':  rs.id}) }}">{{ rs.title }}</a>
+                        </h4>
+                        <div class="info-product-price my-2">
+                            <span class="item_price">{{ rs.sprice }} TL</span>
+                        </div>
+                        <a href="{{ path('product_detail', {'id':  rs.id}) }}"><input style="background-color: dodgerblue; color:white" name="submit" type="submit" value="ÜRÜN DETAYI" class="button btn" /></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div></div>
+    <!-- //second section -->
+{% endblock %}
+{% block sidebar %}{{  include ('home/_sidebar.html.twig') }} {% endblock %}

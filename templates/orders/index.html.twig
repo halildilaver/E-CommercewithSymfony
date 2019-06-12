@@ -1,0 +1,44 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Orders index{% endblock %}
+{% block body %}
+    {{  include ('home/usersidebar.html.twig') }}
+    <div style="width:75%;">
+    <h1>Orders index</h1>
+        {{  include ('admin/messages.html.twig') }}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Amount</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Shipping Infp</th>
+                <th>Status</th>
+                <th>Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.amount }}</td>
+                <td>{{ order.name }}</td>
+                <td>{{ order.city }}</td>
+                <td>{{ order.phone }}</td>
+                <td>{{ order.shipinfo }}</td>
+                <td>{{ order.status }}</td>
+                <td>
+                    <a href="{{ path('orders_show', {'id': order.id}) }}"><button style="background-color: forestgreen" class="btn my-2 my-sm-0">GÖSTER</button></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

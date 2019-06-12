@@ -1,0 +1,52 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Üye Detay{% endblock %}
+
+{% block body %}
+    <h1>Üye Detay</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{% for item in user.roles %}
+                        <option>{{ item }}</option>
+                    {% endfor %}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>***</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ user.name }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ user.status }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ user.address }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ user.phone }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ user.city }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{ include('admin/user/_delete_form.html.twig') }}
+{% endblock %}

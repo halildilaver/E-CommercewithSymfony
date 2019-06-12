@@ -1,0 +1,81 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Orders{% endblock %}
+
+{% block body %}
+    {{  include ('home/usersidebar.html.twig') }}
+    <div style="width:75%;">
+    <h1>Orders</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ order.id }}</td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td>{{ order.amount }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ order.name }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ order.address }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ order.city }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ order.phone }}</td>
+            </tr>
+            <tr>
+                <th>Shipinfo</th>
+                <td>{{ order.shipinfo }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ order.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Sale Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% set total=0 %}
+            {% for rs in orderdetail %}
+                <tr>
+                    <td>{{ rs.id }}</td>
+                    <td>{{ rs.name }}</td>
+                    <td>{{ rs.price }}</td>
+                    <td>{{ rs.quantity }}</td>
+                    <td>{{ rs.amount }}</td>
+                    <td>{{ rs.status }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="11">Order Detail</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="5"><b>Toplam Alışveriş Tutarı: {{ order.amount }} TL</b></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}

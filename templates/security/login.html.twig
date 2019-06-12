@@ -1,0 +1,65 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Log in{% endblock %}
+
+{% block body %}
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+        <div class="sagIcerikBolumu">
+            <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngIf: !IsMobileDevice --><div class="hesabimBolumuTutucu ng-scope" ng-if="!IsMobileDevice">
+                    <div class="hesabimAnasayfa">
+                        <div class="hesabimAnasayfaBaslik">
+                            <h2 class="ng-binding">MERHABA {{ app.user.name }} </h2>
+                            <p class="ng-binding">"Hesabım" sayfasından siparişlerinizi ve arıza/iade/değişim işlemlerinizi takip edebilir, kazandığınız hediye çeki ve puanları görüntüleyebilir, üyelik bilgisi güncelleme, şifre ve adres değişikliği gibi hesap ayarlarınızı kolayca yapabilirsiniz.</p>
+                        </div>
+                        <div class="hesabimAnasayfaMenuler">
+                            <ul>
+                                {% for item in user.roles %}
+                                    {% if (userrol) %}
+                                        <li><a style="background-color: lime" href="/admin"><i class="fa fa-users" aria-hidden="true"></i> <span class="ng-binding">Admin Panel</span></a></li>
+                                        <li><a style="background-color: darkorange" href="/logout"><i class="fa fa-sign-in-alt" aria-hidden="true"></i> <span class="ng-binding">Çıkış</span></a></li>
+                                    {% else %}
+                                <li ng-show="DestekTalepAktif" id="liAnasayfaDestekTalep"><a href="/userpanel/ticket"><i class="fa fa-life-ring" aria-hidden="true"></i> <span class="ng-binding">Yeni Destek Talebi</span></a></li>
+                                        <li><a href="/userpanel/ticket/show"><i class="fa fa-address-book" aria-hidden="true"></i> <span class="ng-binding">Destek Taleplerim</span></a></li>
+                                <li><a href="/orders"><i class="fa fa-bell" aria-hidden="true"></i> <span class="ng-binding">Siparişlerim</span></a></li>
+                                <li><a href="/userpanel"><i class="fa fa-user" aria-hidden="true"></i> <span class="ng-binding">Üyelik Bilgilerim</span></a></li>
+                                <li><a href="/userpanel/edit"><i class="fa fa-address-book" aria-hidden="true"></i> <span class="ng-binding">Bilgilerimi Düzenle</span></a></li>
+                                <li><a href="/shopcart"><i class="fa fa-shopping-bag" aria-hidden="true"></i> <span class="ng-binding">Sepetim</span></a></li>
+                                <li><a href="/userpanel/yorumlarim"><i class="fa fa-star" aria-hidden="true"></i> <span class="ng-binding">Yorumlarım</span></a></li>
+
+                                <li><a href="/logout"><i class="fa fa-sign-in-alt" aria-hidden="true"></i> <span class="ng-binding">Çıkış</span></a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- end ngIf: !IsMobileDevice -->
+            </div>
+        </div>
+    {% else %}
+        <form method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <div class="form-style-5" style="position: relative; margin: 10px auto 90px 300px;">
+                    <fieldset>
+                        <legend><span class="number">1</span>Giriş</legend>
+                        <label for="inputEmail" class="sr-only">Email</label>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+                    </fieldset>
+
+                    <input type="submit" value="Log In" />
+
+            </div>
+        </form>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{{  include ('home/usersidebar.html.twig') }}
+<div class="form-style-5">
+    <form name="order" action="{{ path('orders_new') }}" method="post">
+        <fieldset>
+            <label for="job">Ödenecek Tutar: </label>
+            <input type="text" name="orders[amount]" value="{{ total }}" placeholder="" disabled>
+            <legend><span class="number">1</span> Kargo Alıcı Bilgileri</legend>
+            <label for="job">Adı Soyadı:</label>
+            <input type="text" name="orders[name]" placeholder="" value="{{ app.user.name }}">
+            <label for="job">Adresi:</label>
+            <input type="text" name="orders[address]" placeholder="" value="{{ app.user.address }}">
+            <label for="job">Şehir:</label>
+            <input type="text" name="orders[city]" placeholder="" value="{{ app.user.city }}">
+            <label for="job">Telefon:</label>
+            <input type="text" name="orders[phone]" placeholder="" value="{{ app.user.phone }}">
+            <input type="hidden" name="orders[userid]" value="{{ app.user.id }}" />
+        </fieldset>
+        <fieldset>
+            <legend><span class="number">2</span> Kredi Kartı Bilgileri</legend>
+            <label for="job">Kartın Üzerindeki Ad Soyad:</label>
+            <input type="text" name="cardname" placeholder="" >
+            <label for="job">Kart Numarası:</label>
+            <input type="text" name="cardnumber" placeholder="" value="">
+            <label for="job">Son Kullanma Tarihi:</label>
+            <select id="job" name="field4">
+                <optgroup label="Ay">
+                    <option value="fishkeeping">1</option>
+                    <option value="reading">2</option>
+                    <option value="boxing">3</option>
+                    <option value="debate">4</option>
+                    <option value="gaming">5</option>
+                    <option value="snooker">6</option>
+                    <option value="other_indoor">7</option>
+                    <option value="gaming">8</option>
+                    <option value="snooker">9</option>
+                    <option value="other_indoor">10</option>
+                    <option value="snooker">11</option>
+                    <option value="other_indoor">12</option>
+                </optgroup>
+            </select>
+            <select id="job" name="field4">
+                <optgroup label="Yıl">
+                    <option value="fishkeeping">2018</option>
+                    <option value="reading">2019</option>
+                    <option value="boxing">2020</option>
+                    <option value="debate">2021</option>
+                    <option value="gaming">2022</option>
+                </optgroup>
+            </select>
+            <label for="job">CVC:</label>
+            <input type="text" name="" placeholder="" value="">
+        </fieldset>
+        <input type="hidden" name="token" value="{{ csrf_token('form-order') }}" />
+        <input type="submit" value="Satın AL" />
+    </form>
+</div>

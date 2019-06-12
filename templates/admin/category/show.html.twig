@@ -1,0 +1,42 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Kategori Göster{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a><i class="fa fa-angle-right"></i><a href="/admin/category">Kategoriler</a><i class="fa fa-angle-right"></i>Kategori Göster</li>
+    </ol>
+    <h3>Kategori Göster</h3>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th style="color: white;">Id</th>
+                <td>{{ category.id }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Parentid</th>
+                <td>{{ category.parentid }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Title</th>
+                <td>{{ category.title }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Keywords</th>
+                <td>{{ category.keywords }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Description</th>
+                <td>{{ category.description }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Status</th>
+                <td>{{ category.status }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    {{ include('admin/category/_delete_form.html.twig') }}
+
+
+{% endblock %}

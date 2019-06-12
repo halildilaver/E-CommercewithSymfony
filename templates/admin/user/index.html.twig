@@ -1,0 +1,57 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a><i class="fa fa-angle-right"></i>Üye Listesi</li>
+    </ol>
+    <div class="agile-grids">
+        <!--four-grids here-->
+        <div class="w3l-table-info">
+            <div class="bg-effect" align="right">
+                <ul class="bt-list">
+                    <li><a href="{{ path('admin_user_new') }}" class="hvr-icon-float-away col-24 bg-success">Yeni Üye</a></li>
+                </ul>
+            </div>
+            <h2>Üye Listesi</h2>
+            <table id="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>İsim</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Durum</th>
+                    <th>Adres</th>
+                    <th>Telefon</th>
+                    <th>Şehir</th>
+                    <th>Göster</th>
+                    <th>Düzenle</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in users %}
+                    <tr>
+                        <td data-th="ID"><span class="bt-content">{{ row.id }}</span></td>
+                        <td data-th="İsim"><span class="bt-content">{{ row.name }}</span></td>
+                        <td data-th="E-Mail"><span class="bt-content">{{ row.email }}</span></td>
+                        <td data-th="Tür"><span class="bt-content">
+                            {% for item in row.roles %}
+                                {{ item }}
+                            {% endfor %}
+                            </span></td>
+                        <td data-th="Durum"><span class="bt-content">{{ row.status }}</span></td>
+                        <td data-th="Adres"><span class="bt-content">{{ row.address }}</span></td>
+                        <td data-th="Tel"><span class="bt-content">{{ row.phone }}</span></td>
+                        <td data-th="Şehir"><span class="bt-content">{{ row.city }}</span></td>
+                        <td data-th="Göster"><a href="{{ path('admin_user_show', {'id': row.id}) }}" class="btn btn-xs btn-primary bg-alert dark text-white fw600 text-center">Göster</a></td>
+                        <td data-th="Düzenle"><a href="{{ path('admin_user_edit', {'id': row.id}) }}" class="btn btn-xs btn-primary bg-danger dark text-white fw600 text-center">Düzenle</a></td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

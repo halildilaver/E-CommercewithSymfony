@@ -1,0 +1,14 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}{{ data[0].title }} | Referanslar{% endblock %}
+{% block keywords %}{{ data[0].keywords }}{% endblock %}
+{% block description %}{{ data[0].description }}{% endblock %}
+
+{% block body %}
+        <h5 align="center">Referanslar</h5>
+        <div>
+            <p>{{ data[0].referances|raw }}</p>
+        </div>
+{% endblock %}
+
+

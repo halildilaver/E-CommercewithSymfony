@@ -1,0 +1,48 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Siparişler{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a><i class="fa fa-angle-right"></i>Siparişler</li>
+    </ol>
+    <div class="agile-grids">
+        <!--four-grids here-->
+        <div class="w3l-table-info">
+            <h1>Siparişler</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Phone</th>
+                    <th>Admin Note</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Detail</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.name }}</td>
+                        <td>{{ order.city }}</td>
+                        <td>{{ order.phone }}</td>
+                        <td>{{ order.note }}</td>
+                        <td>{{ order.amount }} TL</td>
+                        <td>{{ order.status }}</td>
+                        <td data-th="Göster"><a href="javascript:openWin('{{ path('admin_orders_show', {'id': order.id}) }}','','toolbar=no,location=no,directories=0,status=no,top=100,left=200,menuBar=no,scrollBars=no,resizable=no,width=600,height=800');" class="btn btn-xs btn-primary bg-success dark text-white fw600 text-center">Göster</a></td>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="11">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

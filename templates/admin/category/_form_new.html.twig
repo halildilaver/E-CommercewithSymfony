@@ -1,0 +1,78 @@
+<div class="grid-form1">
+    <div class="panel-body">
+        <form class="form-horizontal" method="post">
+            <div class="form-group">
+                <label for="selector1" class="col-sm-2 control-label">Parentid </label>
+                <div class="col-sm-8"><select name="category[parentid]" id="selector1" class="form-control1">
+                        {% if category.parentid!=0 %}
+                            <option value="{{ category.parentid }}">{{ category.title }}</option>
+                        {% else %}
+                            <option value="0">Ana Kategori</option>
+                        {% endif %}
+
+                        <option value="0">Ana Kategori</option>
+                        {% for cat in catlist %}
+                            <option value="{{ cat.id }}">{{ cat.title }}</option>
+                        {% endfor %}
+                    </select></div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Title (Başlık)</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									</span>
+                        <input id="title" name="category[title]" class="form-control1" type="text" value="{{ category.title }}" placeholder="Title (Başlık)">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Keywords (Anahtar Kelimeler)</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									</span>
+                        <input id="keywords" name="category[keywords]" class="form-control1" type="text" value="{{ category.keywords }}" placeholder="Keywords (Anahtar Kelimeler)">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Description (Açıklama)</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                        <input type="text" name="category[description]" class="form-control1" value="{{ category.description }}" placeholder="Description (Açıklama)">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="selector1" class="col-sm-2 control-label">Status (Durum)</label>
+                <div class="col-sm-8"><select name="category[status]" id="selector1" class="form-control1">
+                        <option>{{ category.status }}</option>
+                        <option>TRUE</option>
+                        <option>FALSE</option>
+                    </select></div>
+            </div>
+            <div class="row">
+                <div align="center" class="col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn-primary btn">Tamamla</button>
+                    <a href="{{ path('admin_category_index') }}" class="btn btn-large btn-primary bg-alert dark text-white fw600 text-center">Lİsteye Dön</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

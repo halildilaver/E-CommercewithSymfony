@@ -1,0 +1,27 @@
+<!--four-grids here-->
+<center>
+    <div class="sagIcerikBolumu">
+        <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngIf: !IsMobileDevice --><div class="hesabimBolumuTutucu ng-scope" ng-if="!IsMobileDevice">
+                <div class="hesabimAnasayfa">
+                    <div class="hesabimAnasayfaBaslik">
+                        <h2 class="ng-binding">MERHABA {{ app.user.name }} </h2>
+                        <p class="ng-binding">"Admin" sayfasından Anasayfanızdaki tüm verileri düzenleyebilir, yeni kategoriler,ürünler ekleyebilir, eski verilerinizi güncelleyebilirsiniz.</p>
+                    </div>
+                    <div class="hesabimAnasayfaMenuler">
+                        <ul>
+                            <li><a href="/admin/messages"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="ng-binding">Mesajlar</span></a></li>
+                            <li><a href="/admin/product"><i class="fa fa-star" aria-hidden="true"></i> <span class="ng-binding">Ürünler</span></a></li>
+                            <li><a href="/admin/user"><i class="fa fa-user" aria-hidden="true"></i> <span class="ng-binding">Üyeler</span></a></li>
+                            <li><a href="/admin/category"><i class="fa fa-tags" aria-hidden="true"></i> <span class="ng-binding">Kategoriler</span></a></li>
+                            <li><a href="/admin/messages/usermessages"><i class="fa fa-ticket" aria-hidden="true"></i> <span class="ng-binding">Üye Mesajları</span></a></li>
+                            <li><a href="/comments"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="ng-binding">Üye Yorumları</span></a></li>
+                            <li><a href="/admin/orders/new"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="ng-binding">Yeni Siparişler</span></a></li>
+                            <li><a href="/admin/setting"><i class="fa fa-gears" aria-hidden="true"></i> <span class="ng-binding">Ayarlar</span></a></li>
+                            <li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> <span class="ng-binding">Çıkış</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end ngIf: !IsMobileDevice -->
+        </div>
+    </div>
+</center>

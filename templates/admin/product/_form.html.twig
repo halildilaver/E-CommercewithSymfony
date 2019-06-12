@@ -1,0 +1,132 @@
+<div class="grid-form1">
+    <div class="panel-body">
+        <form class="form-horizontal" method="post">
+            <div class="form-group">
+                <label for="selector1" class="col-sm-2 control-label">Kategorisi </label>
+                <div class="col-sm-8"><select name="product[category_id]" id="selector1" class="form-control1">
+                        {% if product.categoryid!=0 %}
+                            <option value="{{ product.categoryid }}">{{ catname[0].title }}</option>
+                        {% else %}
+                            <option value="0">Ana Kategori</option>
+                        {% endif %}
+                        <option value="0">Ana Kategori</option>
+                        {% for cat in catlist %}
+                            <option value="{{ cat.id }}">{{ cat.title }}</option>
+                        {% endfor %}
+                    </select></div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Title (Başlık)</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									</span>
+                        <input id="title" name="product[title]" class="form-control1" type="text" value="{{ product.title }}" placeholder="Title (Başlık)">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Keywords (Anahtar Kelimeler)</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-adn"></i>
+									</span>
+                        <input id="keywords" name="product[keywords]" class="form-control1" type="text" value="{{ product.keywords }}" placeholder="Keywords (Anahtar Kelimeler)">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Description (Açıklama)</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                        <input type="text" name="product[description]" class="form-control1" value="{{ product.description }}" placeholder="Description (Açıklama)">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Alış Fiyatı</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                        <input type="text" name="product[pprice]" class="form-control1" value="{{ product.pprice }}" placeholder="Alış Fiyatı">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Satış Fiyatı</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                        <input type="text" name="product[sprice]" class="form-control1" value="{{ product.sprice }}" placeholder="Satış Fiyatı">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Miktar</label>
+                <div class="col-md-8">
+                    <div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+                        <input type="text" name="product[amount]" class="form-control1" value="{{ product.amount }}" placeholder="Miktar">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <p class="help-block">a-z veya A-Z</p>
+                </div>
+            </div>
+                        <input type="hidden" name="product[image]" class="form-control1" value="{{ product.image }}" placeholder="image">
+            <div class="form-group">
+                <label for="selector1" class="col-sm-2 control-label">Status (Durum)</label>
+                <div class="col-sm-8"><select name="product[status]" id="selector1" class="form-control1">
+                        <option>{{ product.status }}</option>
+                        <option>TRUE</option>
+                        <option>FALSE</option>
+                    </select></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Detay</label>
+                <div class="col-sm-8">
+                    <textarea id="summernote2" name="product[detail]" rows="10" >{{ product.detail }}</textarea>
+                    <script>
+                        $('#summernote2').summernote({
+                            placeholder: 'Birşeyler yaz..',
+                            tabsize: 2,
+                            height: 100
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row">
+                <div align="center" class="col-sm-8 col-sm-offset-2">
+                    <button type="submit" class="btn-primary btn">Tamamla</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,49 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Shopcart index{% endblock %}
+
+
+{% block body %}
+    {{  include ('home/usersidebar.html.twig') }}
+    <div style="width:75%;">
+    <h1>Shopcart index</h1>
+    {{  include ('admin/messages.html.twig') }}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Sale Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for shopcart in shopcarts %}
+            <tr>
+                <td>{{ shopcart.id }}</td>
+                <td>{{ shopcart.title }}</td>
+                <td>{{ shopcart.sprice }} TL</td>
+                <td>{{ shopcart.quantity }}</td>
+                <td>{{ shopcart.quantity * shopcart.sprice }} TL</td>
+                <td>
+                    {{ include('shopcart/_delete_form.html.twig') }}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5"><b><i>Sepette Ürün Bulunamadı!</i></b></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% if shopcarts !=null %}
+        <h4>Toplam Sepet Tutarı:{{ total }} TL</h4>
+    <a href="{{ path('orders_new') }}"><button style="background-color: forestgreen" class="btn my-2 my-sm-0" type="submit">Siparişi Onayla</button></a>
+    {% else %}
+        <br>
+    {% endif %}
+    </div>
+{% endblock %}

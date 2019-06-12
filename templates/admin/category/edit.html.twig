@@ -1,0 +1,11 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Kategori Düzenleme{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a><i class="fa fa-angle-right"></i><a href="/admin/category">Kategoriler</a><i class="fa fa-angle-right"></i>Kategori Düzenleme</li>
+    </ol>
+    <h3>Kategori Düzenleme</h3>
+    {{ include('admin/category/_form.html.twig', {'button_label': 'Update'}) }}
+{% endblock %}

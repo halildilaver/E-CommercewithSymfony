@@ -1,0 +1,12 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Edit Setting{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a><i class="fa fa-angle-right"></i><a href="/admin/setting">Ayarlar</a><i class="fa fa-angle-right"></i>Ayar Düzenleme</li>
+    </ol>
+    {{ include('admin/messages.html.twig') }}
+    {{ include('admin/setting/_form.html.twig', {'button_label': 'Update'}) }}
+
+{% endblock %}

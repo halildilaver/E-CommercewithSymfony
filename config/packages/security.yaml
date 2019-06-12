@@ -1,0 +1,52 @@
+security:
+    encoders:
+        App\Entity\Admin\User:
+            algorithm: bcrypt
+            cost: 12
+
+    access_denied_url: /login
+
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        # used to reload users from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\Admin\User
+                property: email
+        # used to reload user from session & other features (e.g. switch_user)
+        # used to reload user from session & other features (e.g. switch_user)
+        # used to reload users from session & other features (e.g. switch_user)
+        # used to reload users from session & other features (e.g. switch_user)
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            guard:
+                authenticators:
+                    - App\Security\UserAuthenticator
+            logout:
+                path: app_logout
+                target: /
+
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+         - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/comments/new, roles: ROLE_USER }
+         - { path: ^/comments, roles: ROLE_ADMIN }
+         - { path: ^/user, roles: ROLE_USER }
+         - { path: ^/user, roles: ROLE_ADMIN }
+         - { path: ^/shopcart, roles: ROLE_USER }
+         - { path: ^/orders, roles: ROLE_USER }
+         - { path: ^/userpanel, roles: ROLE_USER }

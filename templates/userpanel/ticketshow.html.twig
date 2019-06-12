@@ -1,0 +1,42 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Gönderilmiş Mesajlar{% endblock %}
+{% block body %}
+    {{  include ('home/usersidebar.html.twig') }}
+    <div style="width:75%;">
+        <h1>Gönderilmiş Mesajlar</h1>
+        {{  include ('admin/messages.html.twig') }}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Message ID</th>
+                <th>User Name</th>
+                <th>Message Subject</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Admin Comment</th>
+                <th>Detail</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for rs in messages %}
+                <tr>
+                    <td>{{ rs.id }}</td>
+                    <td>{{ rs.name }}</td>
+                    <td>{{ rs.subject }}</td>
+                    <td>{{ rs.message }}</td>
+                    <td>{{ rs.status }}</td>
+                    <td>{{ rs.comment }}</td>
+                    <td>
+                        <a href="{{ path('userpanel_ticket_show_detail', {'id': rs.id}) }}"><button style="background-color: forestgreen" class="btn my-2 my-sm-0">GÖSTER</button></a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="11">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

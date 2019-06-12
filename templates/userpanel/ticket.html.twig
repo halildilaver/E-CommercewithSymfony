@@ -1,0 +1,53 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Ticket{% endblock %}
+
+{% block body %}
+    {{  include ('home/usersidebar.html.twig') }}
+    <div class="container py-xl-4 py-lg-2" style="width: 75%;margin-left: 10px;">
+
+        <div class="contact-grids1 w3agile-6">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 contact-form1 form-group">
+                        <label class="col-form-label">Name</label>
+                        <input type="text" class="form-control" name="messages[name]" placeholder="" required="" value="{{ app.user.name }}">
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form1 form-group">
+                        <label class="col-form-label">E-mail</label>
+                        <input type="email" class="form-control" name="messages[email]" placeholder="" required="" value="{{ app.user.email }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 contact-form1 form-group">
+                        <label class="col-form-label">Subject</label>
+                        <input type="text" class="form-control" name="messages[subject]" placeholder="" required="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 contact-form1 form-group">
+                        <label class="col-form-label">Durum</label>
+                        <select name="messages[status]" id="selector1" class="form-control">
+                            <option>Yeni</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="hidden" value="{{ app.user.id }}" name="messages[userid]">
+                <div class="contact-me animated wow slideInUp form-group">
+                    <label class="col-form-label">Message</label>
+                    <textarea name="messages[message]" class="form-control" placeholder="" required=""> </textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 contact-form1 form-group">
+                        <input type="hidden" class="form-control" name="messages[ifuser]" placeholder="" required="" value="TRUE">
+                    </div>
+                </div>
+                <div class="contact-grids1 w3agile-6">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <!-- //form -->
+    </div>
+{% endblock %}

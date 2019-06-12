@@ -1,0 +1,6 @@
+<form align="center" method="post" action="{{ path('admin_category_delete', {'id': category.id}) }}" onsubmit="return confirm('Silmek istediğinize eminmisiniz?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ category.id) }}">
+    <button class="btn btn-large btn-primary bg-danger dark text-white fw600 text-center">SİL</button>
+    <a href="{{ path('admin_category_index') }}" class="btn btn-large btn-primary bg-alert dark text-white fw600 text-center">Lİsteye Dön</a>
+</form>

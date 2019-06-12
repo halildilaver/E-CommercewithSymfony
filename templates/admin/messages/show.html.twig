@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %}Messages{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{% block keywords %}{% endblock %}" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('admin') }}/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="{{ asset('admin') }}/css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/morris.css" type="text/css"/>
+    <!-- Graph CSS -->
+    <link href="{{ asset('admin') }}/css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="{{ asset('admin') }}/js/jquery-2.1.4.min.js"></script>
+    <!-- //jQuery -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="{{ asset('admin') }}/css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <!-- tables -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin') }}/css/table-style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin') }}/css/basictable.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin') }}/css/tab.css" />
+    <script type="text/javascript" src="{{ asset('admin') }}/js/jquery.basictable.min.js"></script>
+</head>
+<body>
+    <h1>Messages</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th style="color: white;">Id</th>
+                <td style="color: black;">{{ message.id }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Name</th>
+                <td style="color: black;">{{ message.name }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Email</th>
+                <td style="color: black;">{{ message.email }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Subject</th>
+                <td style="color: black;">{{ message.subject }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Message</th>
+                <td style="color: black;">{{ message.message }}</td>
+            </tr>
+            <tr>
+                <th style="color: white;">Comment</th>
+                <form action="{{ path('admin_messages_update', {'id': message.id}) }}" method="post">
+                    <td style="color: black;"><textarea name="comment" cols="20" rows="3">{{ message.comment }}</textarea></td>
+                    <td><input type="submit" value="Güncelle"></td>
+                   </form>
+            </tr>
+            <tr>
+                <th style="color: white;">Status</th>
+                <td style="color: black;">{{ message.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{ include('admin/messages/_delete_form.html.twig') }}
+</body>

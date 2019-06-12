@@ -1,0 +1,139 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}{{ datapro[0].title }} | {{ data[0].title }}{% endblock %}
+{% block keywords %}{{ data[0].keywords }}{% endblock %}
+{% block description %}{{ data[0].description }}{% endblock %}
+
+{% block body %}
+    <!-- page -->
+    <div class="services-breadcrumb">
+        <div class="agile_inner_breadcrumb">
+            <div class="container">
+                <ul class="w3_short">
+                    <li>
+                        <a href="/">Home</a>
+                        <i>|</i>
+                    </li>
+                    <li>{{ datapro[0].keywords }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //page -->
+
+    <!-- Single Page -->
+    <div class="banner-bootom-w3-agileits py-5">
+        <div class="container py-xl-4 py-lg-2">
+            <!-- tittle heading -->
+            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+                {{ datapro[0].description  }}</h3>
+            <!-- //tittle heading -->
+            <div class="row">
+                <div class="col-lg-5 col-md-8 single-right-left ">
+                    <div class="grid images_3_of_2">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li data-thumb="{{ asset('uploads') }}/images/{{ datapro[0].image }}">
+                                    <div class="thumb-image active">
+                                        <img src="{{ asset('uploads') }}/images/{{ datapro[0].image }}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+                                </li>
+                                {% for rs in images %}
+                                    <li data-thumb="{{ asset('uploads') }}/images/{{ rs.image }}">
+                                        <div class="thumb-image">
+                                            <img src="{{ asset('uploads') }}/images/{{ rs.image }}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 single-right-left simpleCart_shelfItem">
+                    <h3 class="mb-3">{{ datapro[0].title }}</h3>
+                    <p class="mb-3">
+                        <span class="item_price">{{ datapro[0].sprice }}₺</span>
+                        <label>Ücretsiz Kargo</label>
+                    </p>
+                    <div class="occasion-cart">
+                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                            <form name="shopcart" action="{{ path('shopcart_new') }}" method="post">
+                                <label class="control-label"><span>Alacağınız Adet:</span></label>
+                                <input type="number" name="shopcart[quantity]" class="span6" value="1">
+                                <input type="hidden" name="shopcart[productid]" class="span6" value="{{ datapro[0].id }}">
+                                <input type="hidden" name="_csrf_token"
+                                       value="{{ csrf_token('authenticate') }}"
+                                >
+                                <input type="submit" name="submit" value="Add to cart" class="button" />
+
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="single-infoagile">
+                        <ul>
+                            <li class="mb-3">
+                                Stokta KALAN SON: {{ datapro[0].amount }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-single-w3l">
+                        <p class="my-3">
+                            <i class="far fa-hand-point-right mr-2"></i>
+                            <label>1 Year</label>Manufacturer Warranty</p>
+                        <p class="my-sm-4 my-3">
+                            <i class="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm">
+                    <h1>YORUMLAR</h1>
+                    {% for comment in comments %}
+                        <table id="table" style="width: 100%">
+                            <thead>
+                            <tr>
+                                <th style="width: 10%">{{ comment.name }}</th>
+                            </tr>
+                            <tbody>
+                            <tr>
+                                <td data-th="Parent ID"><span class="bt-content">{{ comment.comment }}</span></td>
+                            </tr>
+                            </tbody>
+                            </thead>
+                        </table>
+                    {% else %}
+                        <tr>
+                            <td colspan="5">Yorum Bulunamadı.</td>
+                        </tr>
+                    {% endfor %}
+                    <br>
+
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <h3 align="center">Bu ürün hakkında yorum yap</h3>
+                        <div class="form-style-5">
+                            <form action="{{ path('comments_new') }}" method="post">
+                                <label for="job">Yorumunuz:</label>
+                                <textarea name="comments[comment]" cols="20" rows="3" required></textarea>
+                                <input type="hidden" name="comments[productid]" value="{{ datapro[0].id }}">
+                                <input type="hidden" name="comments[userid]" value="{{ app.user.id }}">
+                                <input type="hidden" name="comments[name]" value="{{ app.user.name }}">
+                                <input type="hidden" name="comments[productname]" value="{{ datapro[0].title }}">
+                                <input type="hidden" name="comments[status]" value="New">
+                                <td><input type="submit" value="Yorum Gönder"></td>
+                            </form>
+                        </div>
+                    {% else %}
+                        <h5 align="center">Yorum yapmak için giriş yapınız...</h5>
+                    {% endif %}
+                </div>
+
+            </div>
+            <h1>ÜRÜN DETAYI</h1>
+            {{ datapro[0].detail|raw }}
+        </div>
+
+    </div>
+    <!-- //Single Page -->
+{% endblock %}
+

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content=" {% block keywords %}{% endblock %}">
+    <meta name="description" content="{% block description %}{% endblock %}" >
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link href="{{ asset('main') }}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Bootstrap css -->
+    <link href="{{ asset('main') }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ asset('main') }}/css/fontawesome-all.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <link href="{{ asset('main') }}/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- pop-up-box -->
+    <link href="{{ asset('main') }}/css/menu.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- menu style -->
+    <link rel="stylesheet" href="{{ asset('main') }}/css/sidebarmenu.css">
+    <link rel="stylesheet" href="{{ asset('main') }}/css/hesabim.css">
+    <!-- //Custom-Files -->
+    <link href="{{ asset('main') }}/css/slider.css" rel="stylesheet" type="text/css" media="screen,projection" />
+    <!-- web fonts -->
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+        div.table-title {
+            display: block;
+            margin: auto;
+            max-width: 600px;
+            padding:5px;
+            width: 100%;
+        }
+
+        .table-title h1 {
+            color: #13171f;
+            font-size: 30px;
+            font-weight: 400;
+            font-style:normal;
+            font-family: "Roboto", helvetica, arial, sans-serif;
+            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+            text-transform:uppercase;
+        }
+
+
+        /*** Table Styles **/
+
+        .table {
+            background: white;
+            border-radius:3px;
+            border-collapse: collapse;
+            height: 320px;
+            margin-left: 15px;
+            max-width: 1000px;
+            padding:5px;
+            width: 100%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            animation: float 5s infinite;
+        }
+
+        th {
+            color:#D5DDE5;;
+            background:#1b1e24;
+            border-bottom:4px solid #9ea7af;
+            border-right: 1px solid #343a45;
+            font-size:15px;
+            font-weight: 100;
+            padding:24px;
+            text-align:left;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            vertical-align:middle;
+        }
+
+        th:first-child {
+            border-top-left-radius:3px;
+        }
+
+        th:last-child {
+            border-top-right-radius:3px;
+            border-right:none;
+        }
+
+        tr {
+            border-top: 1px solid #C1C3D1;
+            border-bottom-: 1px solid #C1C3D1;
+            color:#666B85;
+            font-size:10px;
+            font-weight:normal;
+            text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+        }
+
+        tr:hover td {
+            background:#4E5066;
+            color:#FFFFFF;
+            border-top: 1px solid #22262e;
+        }
+
+        tr:first-child {
+            border-top:none;
+        }
+
+        tr:last-child {
+            border-bottom:none;
+        }
+
+        tr:nth-child(odd) td {
+            background:#EBEBEB;
+        }
+
+        tr:nth-child(odd):hover td {
+            background:#4E5066;
+        }
+
+        tr:last-child td:first-child {
+            border-bottom-left-radius:3px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius:3px;
+        }
+
+        td {
+            background:#FFFFFF;
+            padding:20px;
+            text-align:left;
+            vertical-align:middle;
+            font-weight:300;
+            font-size:14px;
+            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+            border-right: 1px solid #C1C3D1;
+        }
+
+        td:last-child {
+            border-right: 0px;
+        }
+
+        th.text-left {
+            text-align: left;
+        }
+
+        th.text-center {
+            text-align: center;
+        }
+
+        th.text-right {
+            text-align: right;
+        }
+
+        td.text-left {
+            text-align: left;
+        }
+
+        td.text-center {
+            text-align: center;
+        }
+
+        td.text-right {
+            text-align: right;
+        }
+    </style>
+    <style type="text/css">
+        .form-style-5 {
+            max-width: 800px;
+            background: #f4f7f8;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        .form-style-5 fieldset{
+            border: none;
+            height: auto;
+            width: 700px;
+        }
+        .form-style-5 legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .form-style-5 label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-style-5 input[type="text"],
+        .form-style-5 input[type="date"],
+        .form-style-5 input[type="password"],
+        .form-style-5 input[type="datetime"],
+        .form-style-5 input[type="email"],
+        .form-style-5 input[type="number"],
+        .form-style-5 input[type="search"],
+        .form-style-5 input[type="time"],
+        .form-style-5 input[type="url"],
+        .form-style-5 textarea,
+        .form-style-5 select {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background: rgba(255,255,255,.1);
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            margin: 0;
+            outline: 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            background-color: #e8eeef;
+            color:#8a97a0;
+            -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            margin-bottom: 30px;
+        }
+        .form-style-5 input[type="text"]:focus,
+        .form-style-5 input[type="date"]:focus,
+        .form-style-5 input[type="password"]:focus,
+        .form-style-5 input[type="datetime"]:focus,
+        .form-style-5 input[type="email"]:focus,
+        .form-style-5 input[type="number"]:focus,
+        .form-style-5 input[type="search"]:focus,
+        .form-style-5 input[type="time"]:focus,
+        .form-style-5 input[type="url"]:focus,
+        .form-style-5 textarea:focus,
+        .form-style-5 select:focus{
+            background: #d2d9dd;
+        }
+        .form-style-5 input:focus{
+             color: #000;
+        }
+        .form-style-5 select{
+            -webkit-appearance: menulist-button;
+            height:35px;
+        }
+        .form-style-5 .number {
+            background: orangered;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+            border-radius: 15px 15px 15px 0px;
+        }
+
+        .form-style-5 input[type="submit"],
+        .form-style-5 input[type="button"]
+        {
+            position: relative;
+            display: block;
+            padding: 19px 39px 18px 39px;
+            color: #FFF;
+            margin: 0 auto;
+            background: dodgerblue;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            width: 100%;
+            border: 1px solid dodgerblue;
+            border-width: 1px 1px 3px;
+            margin-bottom: 10px;
+        }
+        .form-style-5 input[type="submit"]:hover,
+        .form-style-5 input[type="button"]:hover
+        {
+            background: dodgerblue;
+        }
+    </style>
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <!-- //web fonts -->
+
+</head>
+
+<body>
+<!-- top-header -/->
+<div class="agile-main-top">
+    <div class="container-fluid">
+        <div class="row main-top-w3l py-2">
+            <div class="col-lg-4 header-most-top">
+                <p class="text-white text-lg-left text-center">{{ data[0].description }}
+                    <i class="fas fa-shopping-cart ml-1"></i>
+                </p>
+            </div>
+            <div class="col-lg-8 header-right mt-lg-0 mt-2">
+                <!-- header lists -/->
+                <ul>
+                    <li class="text-center border-right text-white">
+                        <a class="play-icon popup-with-zoom-anim text-white">
+                            <i class="fas fa-map-marker mr-2"></i>Türkiye/Karabük</a>
+                    </li>
+                    <li class="text-center border-right text-white">
+                            <i class="fas fa-truck mr-2"></i>{{ data[0].email }}
+                    </li>
+                    <li class="text-center border-right text-white">
+                        <i class="fas fa-phone mr-2"></i> {{ data[0].phone }}
+                    </li>
+                    <li class="text-center border-right text-white">
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <a href="/login" class="text-white">
+                            <i class="fas fa-sign-in-alt mr-2"> Profil </i></a>
+                        {% else %}
+                            <a href="/login"  class="text-white">
+                                <i class="fas fa-sign-in-alt mr-2"></i> Log In </a>
+                        {% endif %}
+
+                    </li>
+                    <li class="text-center text-white">
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <a href="/logout" class="text-white">
+                                <i class="fas fa-sign-in-alt mr-2"> Logout </i></a>
+                        {% else %}
+                            <a href="/register"  class="text-white">
+                                <i class="fas fa-sign-out-alt mr-2"></i>Register </a>
+                        {% endif %}
+
+                    </li>
+                </ul>
+                <!-- //header lists -/->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //shop locator (popup) -->
+
+<!-- modals -->
+<!-- log in -->
+<!-- register -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label class="col-form-label">Your Name</label>
+                        <input type="text" class="form-control" placeholder=" " name="Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" class="form-control" placeholder=" " name="Email" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Confirm Password</label>
+                        <input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
+                    </div>
+                    <div class="right-w3l">
+                        <input type="submit" class="form-control" value="Register">
+                    </div>
+                    <div class="sub-w3l">
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
+                            <label class="custom-control-label" for="customControlAutosizing2">I Accept to the Terms & Conditions</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //modal -->
+<!-- //top-header -->
+
+<!-- header-bottom-->
+<div class="header-bot">
+    <div class="container">
+        <div class="row header-bot_inner_wthreeinfo_header_mid">
+            <!-- logo -->
+            <div class="col-md-3 logo_agile">
+                <h1 class="text-center">
+                    <a href="/" class="font-weight-bold font-italic">
+                        <img src="{{ asset('main') }}/images/logo2.png" alt=" " class="img-fluid">{{ data[0].company }}
+                    </a>
+                </h1>
+            </div>
+            <!-- //logo -->
+            <!-- header-bot -->
+            <div class="col-md-9 header mt-4 mb-md-0 mb-4">
+                <div class="row">
+                    <!-- search -->
+                    <div class="col-10 agileits_search">
+                        <form class="form-inline" action="#" method="post">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Search" required>
+                            <button class="btn my-2 my-sm-0" type="submit">Ara</button>
+                        </form>
+                    </div>
+                    <!-- //search -->
+                    <!-- cart details -->
+                    <div class="col-2 top_nav_right text-center mt-sm-0 mt-2" style="width: auto">
+                        <div class="wthreecartaits wthreecartaits2 cart cart box_1" style="width: auto">
+                                <input type="hidden" name="cmd" value="_cart">
+                                <input type="hidden" name="display" value="1">
+                                <a href="/shopcart"><button class="btn w3view-cart" type="submit" name="submit" value="">
+                                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                            {{ count }} ürün için toplam Tutar:{{ total }} TL
+                                        {% else %}
+                                            Sepetinizde Ürün Bulunmamaktadır
+                                        {% endif %}<i class="fas fa-cart-arrow-down"></i>
+                                </button></a>
+                        </div>
+                    </div>
+                    <!-- //cart details -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar2">
+    <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="/hakkimizda"><i class="fa fa-fw fa-address-book"></i> Hakkımızda</a>
+    <a href="/iletisim"><i class="fa fa-fw fa-envelope"></i> İletişim</a>
+    <a href="/referanslar"><i class="fa fa-fw fa-users"></i> Referanslar</a>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a href="/login"><i class="fa fa-fw fa-user"></i> Profil</a>
+    {% else %}
+        <a href="/register"><i class="fa fa-fw fa-user-circle"></i> Kayıt Ol</a>
+    {% endif %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a class="logout" href="/logout"><i class="fa fa-fw fa-sign-in-alt"></i> Çıkış Yap</a>
+    {% else %}
+        <a class="login" href="/login"><i class="fa fa-fw fa-user"></i> Giriş Yap</a>
+    {% endif %}
+</div>
+<!-- shop locator (popup) -->
+<!-- //header-bottom -->
+<!-- navigation -/->
+<div class="navbar-inner">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto text-center mr-xl-5">
+                    <li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
+                        <a class="nav-link" href="/">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    </li>
+                    <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                        <a class="nav-link" href="/hakkimizda">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/referanslar">References</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/iletisim">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- //navigation -->
+{% block slider %} {% endblock %}
+<!-- top Products -->
+    <div class="container py-xl-4 py-lg-2">
+        {{ include('admin/messages.html.twig') }}
+        <div class="row">
+
+            {% block sidebar %} {% endblock %}
+            {% block body %} {% endblock %}
+            {% block content %} {% endblock %}
+
+        </div>
+    </div>
+
+
+<!-- footer -->
+<footer>
+    <!-- footer third section -->
+    <div class="w3l-middlefooter-sec">
+        <div class="container py-md-5 py-sm-4 py-3">
+            <div style="margin: 0px 0px 0px 100px" class="row footer-info w3-agileits-info">
+                <!-- footer categories -->
+
+                <!-- //footer categories -->
+                <!-- quick links -->
+                <div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
+                    <h3 class="text-white font-weight-bold mb-3">Hızlı Linkler</h3>
+                    <ul>
+                        <li class="mb-3">
+                            <a href="/hakkimizda">Hakkımızda</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="/iletisim">İletişim</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="/referanslar">Referanslar</a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin: 0px 0px 0px 110px" class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
+                    <!-- newsletter -->
+                    <!-- //newsletter -->
+                    <!-- social icons -->
+                    <div class="footer-grids  w3l-socialmk mt-3">
+                        <h3 class="text-white font-weight-bold mb-3">Bizi Takip Edin</h3>
+                        <div class="social">
+                            <ul>
+                                <li>
+                                    <a class="icon fb" href="https://www.facabook.com/halildlvr">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon tw" href="https://www.twitter.com/halildlvr">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon gp" href="https://www.instagram.com/halildlvr">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a style="margin-left: 20px;" href="http://www.halildilaver.com.tr" class="font-weight-bold font-italic">
+                                <img src="{{ asset('admin') }}/images/halil.png" alt=" " height="50px">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- //social icons -->
+                </div>
+                <div style="margin: 0px 0px 0px 140px" class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
+                    <h3 class="text-white font-weight-bold mb-3">Bilgiler</h3>
+                    <ul>
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker"></i> {{ data[0].address }}</li>
+                        <li class="mb-3">
+                            <i class="fas fa-mobile"></i> {{ data[0].fax }} </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone"></i> +9{{ data[0].phone }} </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope-open"></i>
+                            <a href="mailto:{{ data[0].email }}"> {{ data[0].email }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //quick links -->
+        </div>
+    </div>
+    <!-- //footer third section -->
+
+    <!-- //footer -->
+    <!-- copyright -/->
+    <div class="copy-right py-3">
+        <div class="container">
+            <p class="text-center text-white">© 2018 Electro Store. All rights reserved | Design by
+                <a href="http://w3layouts.com"> W3layouts.</a>
+            </p>
+        </div>
+    </div>
+    <!-- //copyright -->
+
+    <!-- js-files -->
+    <!-- jquery -->
+    <script src="{{ asset('main') }}/js/jquery-2.2.3.min.js"></script>
+    <!-- //jquery -->
+
+    <!-- nav smooth scroll -->
+    <script>
+        $(document).ready(function () {
+            $(".dropdown").hover(
+                function () {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function () {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    </script>
+    <!-- //nav smooth scroll -->
+
+    <!-- popup modal (for location)-->
+    <script src="{{ asset('main') }}/js/jquery.magnific-popup.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+        });
+    </script>
+    <!-- //popup modal (for location)-->
+
+    <!-- cart-js -->
+    <script src="{{ asset('main') }}/js/minicart.js"></script>
+    <script>
+        paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+
+        paypals.minicarts.cart.on('checkout', function (evt) {
+            var items = this.items(),
+                len = items.length,
+                total = 0,
+                i;
+
+            // Count the number of each item in the cart
+            for (i = 0; i < len; i++) {
+                total += items[i].get('quantity');
+            }
+
+            if (total < 3) {
+                alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+                evt.preventDefault();
+            }
+        });
+    </script>
+    <!-- //cart-js -->
+
+    <!-- password-script -->
+    <script>
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    <!-- //password-script -->
+
+    <!-- imagezoom -->
+    <script src="{{ asset('main') }}/js/imagezoom.js"></script>
+    <!-- //imagezoom -->
+
+    <!-- flexslider -->
+    <link rel="stylesheet" href="{{ asset('main') }}/css/flexslider.css" type="text/css" media="screen" />
+
+    <script src="{{ asset('main') }}/js/jquery.flexslider.js"></script>
+    <script>
+        // Can also be used with $(document).ready()
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+            });
+        });
+    </script>
+    <!-- //FlexSlider-->
+
+    <!-- scroll seller -->
+    <script src="{{ asset('main') }}/js/scroll.js"></script>
+    <!-- //scroll seller -->
+
+    <!-- smoothscroll -->
+    <script src="{{ asset('main') }}/js/SmoothScroll.min.js"></script>
+    <!-- //smoothscroll -->
+
+    <!-- start-smooth-scrolling -->
+    <script src="{{ asset('main') }}/js/move-top.js"></script>
+    <script src="{{ asset('main') }}/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+
+    <!-- for bootstrap working -->
+    <script src="{{ asset('main') }}/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- //js-files -->
+</body>
+
+</html>
